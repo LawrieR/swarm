@@ -1,0 +1,274 @@
+Shader "Custom/Unlit8xNoZ" {
+Properties {
+ _Color ("Main Color", Color) = (1,1,1,1)
+}
+SubShader { 
+ LOD 100
+ Tags { "QUEUE"="Geometry+1" "RenderType"="Opaque" }
+ Pass {
+  Tags { "QUEUE"="Geometry+1" "RenderType"="Opaque" }
+  ZTest Always
+  GpuProgramID 23748
+Program "vp" {
+SubProgram "d3d9 " {
+Bind "vertex" Vertex
+Matrix 0 [glstate_matrix_mvp]
+"vs_2_0
+dcl_position v0
+dp4 oPos.x, c0, v0
+dp4 oPos.y, c1, v0
+dp4 oPos.z, c2, v0
+dp4 oPos.w, c3, v0
+
+"
+}
+SubProgram "d3d11 " {
+Bind "vertex" Vertex
+ConstBuffer "UnityPerDraw" 336
+Matrix 0 [glstate_matrix_mvp]
+BindCB  "UnityPerDraw" 0
+"vs_4_0
+root12:aaabaaaa
+eefiecedijhpljdppnfhjnjaadaickkmhicpkjbcabaaaaaaheabaaaaadaaaaaa
+cmaaaaaagaaaaaaajeaaaaaaejfdeheocmaaaaaaabaaaaaaaiaaaaaacaaaaaaa
+aaaaaaaaaaaaaaaaadaaaaaaaaaaaaaaapapaaaafaepfdejfeejepeoaaklklkl
+epfdeheocmaaaaaaabaaaaaaaiaaaaaacaaaaaaaaaaaaaaaabaaaaaaadaaaaaa
+aaaaaaaaapaaaaaafdfgfpfaepfdejfeejepeoaafdeieefcniaaaaaaeaaaabaa
+dgaaaaaafjaaaaaeegiocaaaaaaaaaaaaeaaaaaafpaaaaadpcbabaaaaaaaaaaa
+ghaaaaaepccabaaaaaaaaaaaabaaaaaagiaaaaacabaaaaaadiaaaaaipcaabaaa
+aaaaaaaafgbfbaaaaaaaaaaaegiocaaaaaaaaaaaabaaaaaadcaaaaakpcaabaaa
+aaaaaaaaegiocaaaaaaaaaaaaaaaaaaaagbabaaaaaaaaaaaegaobaaaaaaaaaaa
+dcaaaaakpcaabaaaaaaaaaaaegiocaaaaaaaaaaaacaaaaaakgbkbaaaaaaaaaaa
+egaobaaaaaaaaaaadcaaaaakpccabaaaaaaaaaaaegiocaaaaaaaaaaaadaaaaaa
+pgbpbaaaaaaaaaaaegaobaaaaaaaaaaadoaaaaab"
+}
+SubProgram "d3d11_9x " {
+Bind "vertex" Vertex
+ConstBuffer "UnityPerDraw" 336
+Matrix 0 [glstate_matrix_mvp]
+BindCB  "UnityPerDraw" 0
+"vs_4_0_level_9_1
+root12:aaabaaaa
+eefieceddggiiplcpkoeljnckhkjahapknjdfpkhabaaaaaadeacaaaaaeaaaaaa
+daaaaaaaomaaaaaammabaaaaaaacaaaaebgpgodjleaaaaaaleaaaaaaaaacpopp
+iaaaaaaadeaaaaaaabaaceaaaaaadaaaaaaadaaaaaaaceaaabaadaaaaaaaaaaa
+aeaaabaaaaaaaaaaaaaaaaaaaaacpoppbpaaaaacafaaaaiaaaaaapjaafaaaaad
+aaaaapiaaaaaffjaacaaoekaaeaaaaaeaaaaapiaabaaoekaaaaaaajaaaaaoeia
+aeaaaaaeaaaaapiaadaaoekaaaaakkjaaaaaoeiaaeaaaaaeaaaaapiaaeaaoeka
+aaaappjaaaaaoeiaaeaaaaaeaaaaadmaaaaappiaaaaaoekaaaaaoeiaabaaaaac
+aaaaammaaaaaoeiappppaaaafdeieefcniaaaaaaeaaaabaadgaaaaaafjaaaaae
+egiocaaaaaaaaaaaaeaaaaaafpaaaaadpcbabaaaaaaaaaaaghaaaaaepccabaaa
+aaaaaaaaabaaaaaagiaaaaacabaaaaaadiaaaaaipcaabaaaaaaaaaaafgbfbaaa
+aaaaaaaaegiocaaaaaaaaaaaabaaaaaadcaaaaakpcaabaaaaaaaaaaaegiocaaa
+aaaaaaaaaaaaaaaaagbabaaaaaaaaaaaegaobaaaaaaaaaaadcaaaaakpcaabaaa
+aaaaaaaaegiocaaaaaaaaaaaacaaaaaakgbkbaaaaaaaaaaaegaobaaaaaaaaaaa
+dcaaaaakpccabaaaaaaaaaaaegiocaaaaaaaaaaaadaaaaaapgbpbaaaaaaaaaaa
+egaobaaaaaaaaaaadoaaaaabejfdeheocmaaaaaaabaaaaaaaiaaaaaacaaaaaaa
+aaaaaaaaaaaaaaaaadaaaaaaaaaaaaaaapapaaaafaepfdejfeejepeoaaklklkl
+epfdeheocmaaaaaaabaaaaaaaiaaaaaacaaaaaaaaaaaaaaaabaaaaaaadaaaaaa
+aaaaaaaaapaaaaaafdfgfpfaepfdejfeejepeoaa"
+}
+SubProgram "d3d9 " {
+Keywords { "FOG_LINEAR" }
+Bind "vertex" Vertex
+Matrix 0 [glstate_matrix_mvp]
+Vector 4 [unity_FogParams]
+"vs_2_0
+dcl_position v0
+dp4 oPos.x, c0, v0
+dp4 oPos.y, c1, v0
+dp4 oPos.w, c3, v0
+dp4 r0.x, c2, v0
+mad oT0.x, r0.x, c4.z, c4.w
+mov oPos.z, r0.x
+
+"
+}
+SubProgram "d3d11 " {
+Keywords { "FOG_LINEAR" }
+Bind "vertex" Vertex
+ConstBuffer "UnityPerDraw" 336
+Matrix 0 [glstate_matrix_mvp]
+ConstBuffer "UnityFog" 32
+Vector 16 [unity_FogParams]
+BindCB  "UnityPerDraw" 0
+BindCB  "UnityFog" 1
+"vs_4_0
+root12:aaacaaaa
+eefiecedddlgndobiocmooggphhjjfiiogegccboabaaaaaapeabaaaaadaaaaaa
+cmaaaaaagaaaaaaaliaaaaaaejfdeheocmaaaaaaabaaaaaaaiaaaaaacaaaaaaa
+aaaaaaaaaaaaaaaaadaaaaaaaaaaaaaaapapaaaafaepfdejfeejepeoaaklklkl
+epfdeheofaaaaaaaacaaaaaaaiaaaaaadiaaaaaaaaaaaaaaabaaaaaaadaaaaaa
+aaaaaaaaapaaaaaaeeaaaaaaaaaaaaaaaaaaaaaaadaaaaaaabaaaaaaabaoaaaa
+fdfgfpfaepfdejfeejepeoaafeeffiedepepfceeaaklklklfdeieefcdeabaaaa
+eaaaabaaenaaaaaafjaaaaaeegiocaaaaaaaaaaaaeaaaaaafjaaaaaeegiocaaa
+abaaaaaaacaaaaaafpaaaaadpcbabaaaaaaaaaaaghaaaaaepccabaaaaaaaaaaa
+abaaaaaagfaaaaadbccabaaaabaaaaaagiaaaaacabaaaaaadiaaaaaipcaabaaa
+aaaaaaaafgbfbaaaaaaaaaaaegiocaaaaaaaaaaaabaaaaaadcaaaaakpcaabaaa
+aaaaaaaaegiocaaaaaaaaaaaaaaaaaaaagbabaaaaaaaaaaaegaobaaaaaaaaaaa
+dcaaaaakpcaabaaaaaaaaaaaegiocaaaaaaaaaaaacaaaaaakgbkbaaaaaaaaaaa
+egaobaaaaaaaaaaadcaaaaakpcaabaaaaaaaaaaaegiocaaaaaaaaaaaadaaaaaa
+pgbpbaaaaaaaaaaaegaobaaaaaaaaaaadgaaaaafpccabaaaaaaaaaaaegaobaaa
+aaaaaaaadcaaaaalbccabaaaabaaaaaackaabaaaaaaaaaaackiacaaaabaaaaaa
+abaaaaaadkiacaaaabaaaaaaabaaaaaadoaaaaab"
+}
+SubProgram "d3d11_9x " {
+Keywords { "FOG_LINEAR" }
+Bind "vertex" Vertex
+ConstBuffer "UnityPerDraw" 336
+Matrix 0 [glstate_matrix_mvp]
+ConstBuffer "UnityFog" 32
+Vector 16 [unity_FogParams]
+BindCB  "UnityPerDraw" 0
+BindCB  "UnityFog" 1
+"vs_4_0_level_9_1
+root12:aaacaaaa
+eefieceddkchmkpaabmckiefcgbcmaeblnkodooaabaaaaaaneacaaaaaeaaaaaa
+daaaaaaaamabaaaaeiacaaaahmacaaaaebgpgodjneaaaaaaneaaaaaaaaacpopp
+jeaaaaaaeaaaaaaaacaaceaaaaaadmaaaaaadmaaaaaaceaaabaadmaaaaaaaaaa
+aeaaabaaaaaaaaaaabaaabaaabaaafaaaaaaaaaaaaaaaaaaaaacpoppbpaaaaac
+afaaaaiaaaaaapjaafaaaaadaaaaapiaaaaaffjaacaaoekaaeaaaaaeaaaaapia
+abaaoekaaaaaaajaaaaaoeiaaeaaaaaeaaaaapiaadaaoekaaaaakkjaaaaaoeia
+aeaaaaaeaaaaapiaaeaaoekaaaaappjaaaaaoeiaaeaaaaaeaaaaaboaaaaakkia
+afaakkkaafaappkaaeaaaaaeaaaaadmaaaaappiaaaaaoekaaaaaoeiaabaaaaac
+aaaaammaaaaaoeiappppaaaafdeieefcdeabaaaaeaaaabaaenaaaaaafjaaaaae
+egiocaaaaaaaaaaaaeaaaaaafjaaaaaeegiocaaaabaaaaaaacaaaaaafpaaaaad
+pcbabaaaaaaaaaaaghaaaaaepccabaaaaaaaaaaaabaaaaaagfaaaaadbccabaaa
+abaaaaaagiaaaaacabaaaaaadiaaaaaipcaabaaaaaaaaaaafgbfbaaaaaaaaaaa
+egiocaaaaaaaaaaaabaaaaaadcaaaaakpcaabaaaaaaaaaaaegiocaaaaaaaaaaa
+aaaaaaaaagbabaaaaaaaaaaaegaobaaaaaaaaaaadcaaaaakpcaabaaaaaaaaaaa
+egiocaaaaaaaaaaaacaaaaaakgbkbaaaaaaaaaaaegaobaaaaaaaaaaadcaaaaak
+pcaabaaaaaaaaaaaegiocaaaaaaaaaaaadaaaaaapgbpbaaaaaaaaaaaegaobaaa
+aaaaaaaadgaaaaafpccabaaaaaaaaaaaegaobaaaaaaaaaaadcaaaaalbccabaaa
+abaaaaaackaabaaaaaaaaaaackiacaaaabaaaaaaabaaaaaadkiacaaaabaaaaaa
+abaaaaaadoaaaaabejfdeheocmaaaaaaabaaaaaaaiaaaaaacaaaaaaaaaaaaaaa
+aaaaaaaaadaaaaaaaaaaaaaaapapaaaafaepfdejfeejepeoaaklklklepfdeheo
+faaaaaaaacaaaaaaaiaaaaaadiaaaaaaaaaaaaaaabaaaaaaadaaaaaaaaaaaaaa
+apaaaaaaeeaaaaaaaaaaaaaaaaaaaaaaadaaaaaaabaaaaaaabaoaaaafdfgfpfa
+epfdejfeejepeoaafeeffiedepepfceeaaklklkl"
+}
+}
+Program "fp" {
+SubProgram "d3d9 " {
+Vector 0 [_Color]
+"ps_2_0
+def c1, 8, 1, 0, 0
+mov r0.w, c1.x
+mul r0.xyz, r0.w, c0
+mov_pp r0.w, c1.y
+mov_pp oC0, r0
+
+"
+}
+SubProgram "d3d11 " {
+ConstBuffer "$Globals" 112
+Vector 96 [_Color]
+BindCB  "$Globals" 0
+"ps_4_0
+root12:aaabaaaa
+eefiecedhfinejphapljemjaohgjamgojdpmjabjabaaaaaaaeabaaaaadaaaaaa
+cmaaaaaagaaaaaaajeaaaaaaejfdeheocmaaaaaaabaaaaaaaiaaaaaacaaaaaaa
+aaaaaaaaabaaaaaaadaaaaaaaaaaaaaaapaaaaaafdfgfpfaepfdejfeejepeoaa
+epfdeheocmaaaaaaabaaaaaaaiaaaaaacaaaaaaaaaaaaaaaaaaaaaaaadaaaaaa
+aaaaaaaaapaaaaaafdfgfpfegbhcghgfheaaklklfdeieefcgiaaaaaaeaaaaaaa
+bkaaaaaafjaaaaaeegiocaaaaaaaaaaaahaaaaaagfaaaaadpccabaaaaaaaaaaa
+diaaaaalhccabaaaaaaaaaaaegiccaaaaaaaaaaaagaaaaaaaceaaaaaaaaaaaeb
+aaaaaaebaaaaaaebaaaaaaaadgaaaaaficcabaaaaaaaaaaaabeaaaaaaaaaiadp
+doaaaaab"
+}
+SubProgram "d3d11_9x " {
+ConstBuffer "$Globals" 112
+Vector 96 [_Color]
+BindCB  "$Globals" 0
+"ps_4_0_level_9_1
+root12:aaabaaaa
+eefiecedpgkhicmpiopebopoipiaihojnlpahddbabaaaaaajeabaaaaaeaaaaaa
+daaaaaaalmaaaaaacmabaaaagaabaaaaebgpgodjieaaaaaaieaaaaaaaaacpppp
+feaaaaaadaaaaaaaabaaceaaaaaadaaaaaaadaaaaaaaceaaaaaadaaaaaaaagaa
+abaaaaaaaaaaaaaaaaacppppfbaaaaafabaaapkaaaaaaaebaaaaiadpaaaaaaaa
+aaaaaaaaabaaaaacaaaaaiiaabaaaakaafaaaaadaaaaahiaaaaappiaaaaaoeka
+abaaaaacaaaaciiaabaaffkaabaaaaacaaaicpiaaaaaoeiappppaaaafdeieefc
+giaaaaaaeaaaaaaabkaaaaaafjaaaaaeegiocaaaaaaaaaaaahaaaaaagfaaaaad
+pccabaaaaaaaaaaadiaaaaalhccabaaaaaaaaaaaegiccaaaaaaaaaaaagaaaaaa
+aceaaaaaaaaaaaebaaaaaaebaaaaaaebaaaaaaaadgaaaaaficcabaaaaaaaaaaa
+abeaaaaaaaaaiadpdoaaaaabejfdeheocmaaaaaaabaaaaaaaiaaaaaacaaaaaaa
+aaaaaaaaabaaaaaaadaaaaaaaaaaaaaaapaaaaaafdfgfpfaepfdejfeejepeoaa
+epfdeheocmaaaaaaabaaaaaaaiaaaaaacaaaaaaaaaaaaaaaaaaaaaaaadaaaaaa
+aaaaaaaaapaaaaaafdfgfpfegbhcghgfheaaklkl"
+}
+SubProgram "d3d9 " {
+Keywords { "FOG_LINEAR" }
+Vector 1 [_Color]
+Vector 0 [unity_FogColor]
+"ps_2_0
+def c2, 8, 1, 0, 0
+dcl t0.x
+mov_sat r0.w, t0.x
+mov r0.xyz, c0
+mov r1.w, c2.x
+mad r0.xyz, c1, r1.w, -r0
+mad_pp r0.xyz, r0.w, r0, c0
+mov r0.w, c2.y
+mov_pp oC0, r0
+
+"
+}
+SubProgram "d3d11 " {
+Keywords { "FOG_LINEAR" }
+ConstBuffer "$Globals" 112
+Vector 96 [_Color]
+ConstBuffer "UnityFog" 32
+Vector 0 [unity_FogColor]
+BindCB  "$Globals" 0
+BindCB  "UnityFog" 1
+"ps_4_0
+root12:aaacaaaa
+eefiecedklbllafegdmpgmohggojcknnnkffpoefabaaaaaajiabaaaaadaaaaaa
+cmaaaaaaieaaaaaaliaaaaaaejfdeheofaaaaaaaacaaaaaaaiaaaaaadiaaaaaa
+aaaaaaaaabaaaaaaadaaaaaaaaaaaaaaapaaaaaaeeaaaaaaaaaaaaaaaaaaaaaa
+adaaaaaaabaaaaaaababaaaafdfgfpfaepfdejfeejepeoaafeeffiedepepfcee
+aaklklklepfdeheocmaaaaaaabaaaaaaaiaaaaaacaaaaaaaaaaaaaaaaaaaaaaa
+adaaaaaaaaaaaaaaapaaaaaafdfgfpfegbhcghgfheaaklklfdeieefcniaaaaaa
+eaaaaaaadgaaaaaafjaaaaaeegiocaaaaaaaaaaaahaaaaaafjaaaaaeegiocaaa
+abaaaaaaabaaaaaagcbaaaadbcbabaaaabaaaaaagfaaaaadpccabaaaaaaaaaaa
+giaaaaacabaaaaaadgcaaaafbcaabaaaaaaaaaaaakbabaaaabaaaaaadcaaaaap
+ocaabaaaaaaaaaaaagijcaaaaaaaaaaaagaaaaaaaceaaaaaaaaaaaaaaaaaaaeb
+aaaaaaebaaaaaaebagijcaiaebaaaaaaabaaaaaaaaaaaaaadcaaaaakhccabaaa
+aaaaaaaaagaabaaaaaaaaaaajgahbaaaaaaaaaaaegiccaaaabaaaaaaaaaaaaaa
+dgaaaaaficcabaaaaaaaaaaaabeaaaaaaaaaiadpdoaaaaab"
+}
+SubProgram "d3d11_9x " {
+Keywords { "FOG_LINEAR" }
+ConstBuffer "$Globals" 112
+Vector 96 [_Color]
+ConstBuffer "UnityFog" 32
+Vector 0 [unity_FogColor]
+BindCB  "$Globals" 0
+BindCB  "UnityFog" 1
+"ps_4_0_level_9_1
+root12:aaacaaaa
+eefiecedmibpmiobaamcbiiobolccchdhdhogoblabaaaaaahaacaaaaaeaaaaaa
+daaaaaaaaeabaaaaoeabaaaadmacaaaaebgpgodjmmaaaaaammaaaaaaaaacpppp
+jaaaaaaadmaaaaaaacaaceaaaaaadmaaaaaadmaaaaaaceaaaaaadmaaaaaaagaa
+abaaaaaaaaaaaaaaabaaaaaaabaaabaaaaaaaaaaaaacppppfbaaaaafacaaapka
+aaaaaaebaaaaiadpaaaaaaaaaaaaaaaabpaaaaacaaaaaaiaaaaaablaabaaaaac
+aaaabiiaaaaaaalaabaaaaacaaaaahiaabaaoekaabaaaaacabaaaiiaacaaaaka
+aeaaaaaeaaaaahiaaaaaoekaabaappiaaaaaoeibaeaaaaaeaaaachiaaaaappia
+aaaaoeiaabaaoekaabaaaaacaaaaaiiaacaaffkaabaaaaacaaaicpiaaaaaoeia
+ppppaaaafdeieefcniaaaaaaeaaaaaaadgaaaaaafjaaaaaeegiocaaaaaaaaaaa
+ahaaaaaafjaaaaaeegiocaaaabaaaaaaabaaaaaagcbaaaadbcbabaaaabaaaaaa
+gfaaaaadpccabaaaaaaaaaaagiaaaaacabaaaaaadgcaaaafbcaabaaaaaaaaaaa
+akbabaaaabaaaaaadcaaaaapocaabaaaaaaaaaaaagijcaaaaaaaaaaaagaaaaaa
+aceaaaaaaaaaaaaaaaaaaaebaaaaaaebaaaaaaebagijcaiaebaaaaaaabaaaaaa
+aaaaaaaadcaaaaakhccabaaaaaaaaaaaagaabaaaaaaaaaaajgahbaaaaaaaaaaa
+egiccaaaabaaaaaaaaaaaaaadgaaaaaficcabaaaaaaaaaaaabeaaaaaaaaaiadp
+doaaaaabejfdeheofaaaaaaaacaaaaaaaiaaaaaadiaaaaaaaaaaaaaaabaaaaaa
+adaaaaaaaaaaaaaaapaaaaaaeeaaaaaaaaaaaaaaaaaaaaaaadaaaaaaabaaaaaa
+ababaaaafdfgfpfaepfdejfeejepeoaafeeffiedepepfceeaaklklklepfdeheo
+cmaaaaaaabaaaaaaaiaaaaaacaaaaaaaaaaaaaaaaaaaaaaaadaaaaaaaaaaaaaa
+apaaaaaafdfgfpfegbhcghgfheaaklkl"
+}
+}
+ }
+}
+}
