@@ -1,0 +1,2813 @@
+fileFormatVersion: 2
+guid: cb658c38330a3d248b2d0eec2d4f4af1
+timeCreated: 1492938462
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: AA
+    100002: AABullet
+    100004: AfterburnL
+    100006: AfterburnL 1
+    100008: AfterburnL 2
+    100010: AfterburnL 3
+    100012: AfterburnR
+    100014: AfterburnR 1
+    100016: AfterburnR 2
+    100018: AfterburnR 3
+    100020: AfterburnR 4
+    100022: AngelF
+    100024: armored
+    100026: B
+    100028: back
+    100030: back 1
+    100032: back 2
+    100034: back 3
+    100036: back_wreck
+    100038: back_wreck (1)
+    100040: back_wreck (1) 1
+    100042: back_wreck (1) 2
+    100044: back_wreck (1) 3
+    100046: back_wreck 1
+    100048: back_wreck 2
+    100050: back_wreck 3
+    100052: baptized
+    100054: beam
+    100056: beam 1
+    100058: beam 2
+    100060: beam 3
+    100062: beam_damaged
+    100064: beam_damaged 1
+    100066: beam_damaged 2
+    100068: beam_damaged 3
+    100070: BL
+    100072: BL_wreck
+    100074: black
+    100076: Body
+    100078: body
+    100080: Body 1
+    100082: body 1
+    100084: Body 10
+    100086: Body 11
+    100088: Body 2
+    100090: body 2
+    100092: Body 3
+    100094: body 3
+    100096: Body 4
+    100098: Body 5
+    100100: Body 6
+    100102: Body 7
+    100104: Body 8
+    100106: Body 9
+    100108: Bomber
+    100110: Bomber (1)
+    100112: Bomber (2)
+    100114: Bomber 1
+    100116: bomberDummy
+    100118: bomberDummy 1
+    100120: bomberDummy 2
+    100122: bomberDummy 3
+    100124: bomberDummy 4
+    100126: bomberDummy 5
+    100128: bomberDummy 6
+    100130: bomberDummy 7
+    100132: bombersWing
+    100134: bomberWing
+    100136: Boost
+    100138: Boost 1
+    100140: Boost 2
+    100142: BoostL
+    100144: BoostR
+    100146: BoostR 1
+    100148: BR
+    100150: BR_wreck
+    100152: Bullet
+    100154: Bullet 1
+    100156: bulletBeam
+    100158: bulletBeam 1
+    100160: BulletFF
+    100162: BulletFF 1
+    100164: BulletHH
+    100166: BulletHH 1
+    100168: BulletR
+    100170: BulletR 1
+    100172: BulletScorpion
+    100174: BulletScorpion 1
+    100176: C
+    100178: camTarget
+    100180: camTarget 1
+    100182: cannon
+    100184: cannon 1
+    100186: cannon 2
+    100188: cannonFF
+    100190: cannonFF 1
+    100192: cannonFF 2
+    100194: cannonL
+    100196: cannonL 1
+    100198: cannonL 10
+    100200: cannonL 11
+    100202: cannonL 12
+    100204: cannonL 13
+    100206: cannonL 14
+    100208: cannonL 15
+    100210: cannonL 16
+    100212: cannonL 17
+    100214: cannonL 18
+    100216: cannonL 19
+    100218: cannonL 2
+    100220: cannonL 20
+    100222: cannonL 3
+    100224: cannonL 4
+    100226: cannonL 5
+    100228: cannonL 6
+    100230: cannonL 7
+    100232: cannonL 8
+    100234: cannonL 9
+    100236: cannonR
+    100238: cannonR 1
+    100240: cannonR 10
+    100242: cannonR 11
+    100244: cannonR 12
+    100246: cannonR 13
+    100248: cannonR 14
+    100250: cannonR 15
+    100252: cannonR 16
+    100254: cannonR 17
+    100256: cannonR 18
+    100258: cannonR 19
+    100260: cannonR 2
+    100262: cannonR 20
+    100264: cannonR 3
+    100266: cannonR 4
+    100268: cannonR 5
+    100270: cannonR 6
+    100272: cannonR 7
+    100274: cannonR 8
+    100276: cannonR 9
+    100278: carrier1
+    100280: carrier2
+    100282: carrierOnRangeWing
+    100284: carriers
+    100286: carrierSmall
+    100288: carrierSmall 1
+    100290: carrierSmall 2
+    100292: carrierSmall 3
+    100294: carriersWing
+    100296: carrierWing
+    100298: center
+    100300: center 1
+    100302: center 2
+    100304: center 3
+    100306: center_wreck
+    100308: center_wreck 1
+    100310: center_wreck 2
+    100312: center_wreck 3
+    100314: client
+    100316: cloud
+    100318: cloud (1)
+    100320: cloud (1) 1
+    100322: cloud (2)
+    100324: cloud (2) 1
+    100326: cloud (3)
+    100328: cloud (3) 1
+    100330: cloud (4)
+    100332: cloud (4) 1
+    100334: cloud (5)
+    100336: cloud (5) 1
+    100338: cloud 1
+    100340: clouds
+    100342: clouds 1
+    100344: Cylinder_003_MeshPart0
+    100346: Cylinder_003_MeshPart1
+    100348: damaged
+    100350: damagedB
+    100352: damagedF
+    100354: day1
+    100356: day2
+    100358: desert
+    100360: desert 1
+    100362: desert 2
+    100364: desert_001
+    100366: desert_002
+    100368: desert_003
+    100370: desert_004
+    100372: desert_005
+    100374: desert_006
+    100376: desert_007
+    100378: desert_008
+    100380: desert_009
+    100382: desert_010
+    100384: desert_011
+    100386: desert_012
+    100388: doorB
+    100390: doorB 1
+    100392: doorB 2
+    100394: doorB 3
+    100396: doorB 4
+    100398: doorB 5
+    100400: doorB 6
+    100402: doorB 7
+    100404: doorB 8
+    100406: doorF
+    100408: doorF 1
+    100410: doorF 2
+    100412: doorF 3
+    100414: doorF 4
+    100416: doorF 5
+    100418: doorF 6
+    100420: doorF 7
+    100422: doorF 8
+    100424: elevator
+    100426: elevator 1
+    100428: elevator 2
+    100430: elevator 3
+    100432: elevator 4
+    100434: elevator_damaged
+    100436: elevator_damaged 1
+    100438: elevator_damaged 2
+    100440: elevator_damaged 3
+    100442: endGame
+    100444: engineL
+    100446: engineR
+    100448: fan
+    100450: fan (1)
+    100452: fan (1) 1
+    100454: fan (1) 2
+    100456: fan (1) 3
+    100458: fan (1) 4
+    100460: fan (2)
+    100462: fan (3)
+    100464: fan (3) 1
+    100466: fan (3) 2
+    100468: fan (3) 3
+    100470: fan (3) 4
+    100472: fan (4)
+    100474: fan (4) 1
+    100476: fan (4) 2
+    100478: fan (4) 3
+    100480: fan (4) 4
+    100482: fan (5)
+    100484: fan 1
+    100486: fan 2
+    100488: fan 3
+    100490: fan 4
+    100492: FL
+    100494: FL_wreck
+    100496: Flames
+    100498: flames
+    100500: flames (1)
+    100502: flames (1) 1
+    100504: flames (1) 2
+    100506: flames (1) 3
+    100508: flames (2)
+    100510: flames (2) 1
+    100512: flames (2) 10
+    100514: flames (2) 11
+    100516: flames (2) 12
+    100518: flames (2) 13
+    100520: flames (2) 14
+    100522: flames (2) 15
+    100524: flames (2) 16
+    100526: flames (2) 2
+    100528: flames (2) 3
+    100530: flames (2) 4
+    100532: flames (2) 5
+    100534: flames (2) 6
+    100536: flames (2) 7
+    100538: flames (2) 8
+    100540: flames (2) 9
+    100542: flames (3)
+    100544: flames (3) 1
+    100546: flames (3) 10
+    100548: flames (3) 11
+    100550: flames (3) 12
+    100552: flames (3) 2
+    100554: flames (3) 3
+    100556: flames (3) 4
+    100558: flames (3) 5
+    100560: flames (3) 6
+    100562: flames (3) 7
+    100564: flames (3) 8
+    100566: flames (3) 9
+    100568: flames (4)
+    100570: flames (4) 1
+    100572: flames (4) 2
+    100574: flames (4) 3
+    100576: flames (4) 4
+    100578: Flames 1
+    100580: flames 1
+    100582: Flames 10
+    100584: flames 10
+    100586: Flames 11
+    100588: flames 11
+    100590: Flames 12
+    100592: flames 12
+    100594: Flames 13
+    100596: flames 13
+    100598: Flames 14
+    100600: flames 14
+    100602: Flames 15
+    100604: Flames 16
+    100606: Flames 17
+    100608: Flames 18
+    100610: Flames 19
+    100612: Flames 2
+    100614: flames 2
+    100616: Flames 20
+    100618: Flames 21
+    100620: Flames 22
+    100622: Flames 23
+    100624: Flames 24
+    100626: Flames 25
+    100628: Flames 26
+    100630: Flames 27
+    100632: Flames 28
+    100634: Flames 29
+    100636: Flames 3
+    100638: flames 3
+    100640: Flames 30
+    100642: Flames 31
+    100644: Flames 32
+    100646: Flames 33
+    100648: Flames 34
+    100650: Flames 35
+    100652: Flames 36
+    100654: Flames 37
+    100656: Flames 38
+    100658: Flames 39
+    100660: Flames 4
+    100662: flames 4
+    100664: Flames 40
+    100666: Flames 41
+    100668: Flames 42
+    100670: Flames 43
+    100672: Flames 44
+    100674: Flames 45
+    100676: Flames 46
+    100678: Flames 47
+    100680: Flames 48
+    100682: Flames 49
+    100684: Flames 5
+    100686: flames 5
+    100688: Flames 6
+    100690: flames 6
+    100692: Flames 7
+    100694: flames 7
+    100696: Flames 8
+    100698: flames 8
+    100700: Flames 9
+    100702: flames 9
+    100704: FlamesL
+    100706: FlamesR
+    100708: FlamesR 1
+    100710: Flash
+    100712: flash
+    100714: flash (1)
+    100716: flash (1) 1
+    100718: Flash 1
+    100720: flash 1
+    100722: Flash 10
+    100724: flash 10
+    100726: Flash 11
+    100728: flash 11
+    100730: Flash 12
+    100732: flash 12
+    100734: Flash 13
+    100736: flash 13
+    100738: Flash 14
+    100740: flash 14
+    100742: Flash 15
+    100744: flash 15
+    100746: Flash 16
+    100748: flash 16
+    100750: Flash 17
+    100752: flash 17
+    100754: Flash 18
+    100756: flash 18
+    100758: Flash 19
+    100760: flash 19
+    100762: Flash 2
+    100764: flash 2
+    100766: Flash 20
+    100768: flash 20
+    100770: Flash 21
+    100772: flash 21
+    100774: Flash 22
+    100776: flash 22
+    100778: Flash 23
+    100780: flash 23
+    100782: Flash 24
+    100784: flash 24
+    100786: Flash 25
+    100788: flash 25
+    100790: Flash 26
+    100792: flash 26
+    100794: Flash 27
+    100796: flash 27
+    100798: Flash 28
+    100800: flash 28
+    100802: Flash 29
+    100804: flash 29
+    100806: Flash 3
+    100808: flash 3
+    100810: Flash 30
+    100812: flash 30
+    100814: Flash 31
+    100816: flash 31
+    100818: Flash 32
+    100820: flash 32
+    100822: Flash 33
+    100824: flash 33
+    100826: Flash 34
+    100828: flash 34
+    100830: Flash 35
+    100832: flash 35
+    100834: Flash 36
+    100836: flash 36
+    100838: Flash 37
+    100840: flash 37
+    100842: Flash 38
+    100844: flash 38
+    100846: Flash 39
+    100848: flash 39
+    100850: Flash 4
+    100852: flash 4
+    100854: Flash 40
+    100856: flash 40
+    100858: Flash 41
+    100860: flash 41
+    100862: Flash 42
+    100864: flash 42
+    100866: Flash 43
+    100868: flash 43
+    100870: Flash 44
+    100872: flash 44
+    100874: Flash 45
+    100876: flash 45
+    100878: Flash 46
+    100880: flash 46
+    100882: Flash 47
+    100884: flash 47
+    100886: Flash 48
+    100888: flash 48
+    100890: Flash 49
+    100892: flash 49
+    100894: Flash 5
+    100896: flash 5
+    100898: Flash 50
+    100900: flash 50
+    100902: Flash 51
+    100904: flash 51
+    100906: Flash 52
+    100908: flash 52
+    100910: Flash 53
+    100912: flash 53
+    100914: Flash 54
+    100916: flash 54
+    100918: Flash 55
+    100920: flash 55
+    100922: Flash 56
+    100924: flash 56
+    100926: Flash 57
+    100928: flash 57
+    100930: Flash 58
+    100932: flash 58
+    100934: flash 59
+    100936: Flash 6
+    100938: flash 6
+    100940: flash 60
+    100942: flash 61
+    100944: flash 62
+    100946: flash 63
+    100948: Flash 7
+    100950: flash 7
+    100952: Flash 8
+    100954: flash 8
+    100956: Flash 9
+    100958: flash 9
+    100960: FR
+    100962: FR_wreck
+    100964: frags
+    100966: frags 1
+    100968: frags 10
+    100970: frags 11
+    100972: frags 12
+    100974: frags 13
+    100976: frags 14
+    100978: frags 15
+    100980: frags 16
+    100982: frags 17
+    100984: frags 18
+    100986: frags 19
+    100988: frags 2
+    100990: frags 20
+    100992: frags 21
+    100994: frags 22
+    100996: frags 23
+    100998: frags 24
+    101000: frags 25
+    101002: frags 26
+    101004: frags 27
+    101006: frags 28
+    101008: frags 29
+    101010: frags 3
+    101012: frags 30
+    101014: frags 31
+    101016: frags 32
+    101018: frags 33
+    101020: frags 34
+    101022: frags 35
+    101024: frags 36
+    101026: frags 37
+    101028: frags 38
+    101030: frags 39
+    101032: frags 4
+    101034: frags 40
+    101036: frags 41
+    101038: frags 42
+    101040: frags 43
+    101042: frags 44
+    101044: frags 45
+    101046: frags 46
+    101048: frags 47
+    101050: frags 48
+    101052: frags 49
+    101054: frags 5
+    101056: frags 50
+    101058: frags 51
+    101060: frags 52
+    101062: frags 53
+    101064: frags 54
+    101066: frags 55
+    101068: frags 56
+    101070: frags 57
+    101072: frags 58
+    101074: frags 59
+    101076: frags 6
+    101078: frags 60
+    101080: frags 61
+    101082: frags 62
+    101084: frags 63
+    101086: frags 64
+    101088: frags 65
+    101090: frags 66
+    101092: frags 67
+    101094: frags 68
+    101096: frags 69
+    101098: frags 7
+    101100: frags 70
+    101102: frags 71
+    101104: frags 72
+    101106: frags 73
+    101108: frags 74
+    101110: frags 75
+    101112: frags 76
+    101114: frags 77
+    101116: frags 78
+    101118: frags 79
+    101120: frags 8
+    101122: frags 80
+    101124: frags 81
+    101126: frags 82
+    101128: frags 9
+    101130: frags_cannon
+    101132: frags_cannon 1
+    101134: frags_cannon 2
+    101136: frags_cannon 3
+    101138: front
+    101140: front 1
+    101142: front 2
+    101144: front 3
+    101146: front_wreck
+    101148: front_wreck 1
+    101150: front_wreck 2
+    101152: front_wreck 3
+    101154: front_wreck 4
+    101156: front_wreck 5
+    101158: front_wreck 6
+    101160: front_wreck 7
+    101162: front_wreck 8
+    101164: frustumTest
+    101166: //RootNode
+    101168: GameManager
+    101170: GameObject (1)
+    101172: goBackArrow
+    101174: goBackArrow 1
+    101176: hudArrow
+    101178: hudArrow 1
+    101180: HUDCenter
+    101182: HUDCountdown
+    101184: hudText
+    101186: hull
+    101188: hull 1
+    101190: hull 10
+    101192: hull 11
+    101194: hull 12
+    101196: hull 13
+    101198: hull 14
+    101200: hull 15
+    101202: hull 16
+    101204: hull 17
+    101206: hull 18
+    101208: hull 19
+    101210: hull 2
+    101212: hull 20
+    101214: hull 21
+    101216: hull 22
+    101218: hull 23
+    101220: hull 24
+    101222: hull 25
+    101224: hull 26
+    101226: hull 27
+    101228: hull 28
+    101230: hull 29
+    101232: hull 3
+    101234: hull 30
+    101236: hull 31
+    101238: hull 32
+    101240: hull 33
+    101242: hull 34
+    101244: hull 35
+    101246: hull 36
+    101248: hull 37
+    101250: hull 38
+    101252: hull 39
+    101254: hull 4
+    101256: hull 40
+    101258: hull 41
+    101260: hull 42
+    101262: hull 43
+    101264: hull 44
+    101266: hull 45
+    101268: hull 46
+    101270: hull 47
+    101272: hull 48
+    101274: hull 49
+    101276: hull 5
+    101278: hull 50
+    101280: hull 51
+    101282: hull 52
+    101284: hull 53
+    101286: hull 54
+    101288: hull 55
+    101290: hull 56
+    101292: hull 57
+    101294: hull 58
+    101296: hull 59
+    101298: hull 6
+    101300: hull 60
+    101302: hull 7
+    101304: hull 8
+    101306: hull 9
+    101308: hull_damaged
+    101310: hull_wreck
+    101312: hull_wreck 1
+    101314: hull_wreck 2
+    101316: hull_wreck 3
+    101318: hullB
+    101320: hullB_wreck
+    101322: hullC
+    101324: hullC_wreck
+    101326: hullF
+    101328: hullF_wreck
+    101330: Impact
+    101332: impact
+    101334: Impact 1
+    101336: impact 1
+    101338: Impact 10
+    101340: Impact 11
+    101342: Impact 12
+    101344: Impact 13
+    101346: Impact 14
+    101348: Impact 15
+    101350: Impact 2
+    101352: Impact 3
+    101354: Impact 4
+    101356: Impact 5
+    101358: Impact 6
+    101360: Impact 7
+    101362: Impact 8
+    101364: Impact 9
+    101366: inputController
+    101368: Jet
+    101370: Jet (1)
+    101372: Jet (1) 1
+    101374: Jet (2)
+    101376: Jet (2) 1
+    101378: Jet (3)
+    101380: Jet (3) 1
+    101382: Jet (4)
+    101384: Jet (4) 1
+    101386: Jet (5)
+    101388: Jet (5) 1
+    101390: Jet (6)
+    101392: Jet (7)
+    101394: Jet (8)
+    101396: Jet (9)
+    101398: jetDummy1
+    101400: jetDummy1 1
+    101402: jetDummy1 2
+    101404: jetDummy1 3
+    101406: jetDummy1 4
+    101408: jetDummy1 5
+    101410: jetDummy1 6
+    101412: jetDummy1 7
+    101414: jetDummy2
+    101416: jetDummy2 1
+    101418: jetDummy2 2
+    101420: jetDummy2 3
+    101422: jetDummy2 4
+    101424: jetDummy2 5
+    101426: jetDummy2 6
+    101428: jetDummy2 7
+    101430: jetPrefab
+    101432: jetWing
+    101434: label
+    101436: label 1
+    101438: label 2
+    101440: LB
+    101442: LB_section
+    101444: left_wreck
+    101446: LF
+    101448: LF_section
+    101450: line
+    101452: lineBig
+    101454: lineBig (2)
+    101456: linePlayer
+    101458: lineWorld
+    101460: Main Camera
+    101462: mark2
+    101464: mark2L
+    101466: mark2R
+    101468: marker
+    101470: mesh
+    101472: Mine
+    101474: Mine 1
+    101476: MineL
+    101478: MineR
+    101480: Miner
+    101482: minerWing
+    101484: Mines
+    101486: mothership
+    101488: music
+    101490: muzzle
+    101492: muzzle 1
+    101494: onEscape
+    101496: onMothershipDeath
+    101498: onPlayerDeath
+    101500: onStart
+    101502: platform
+    101504: platform 1
+    101506: platform 2
+    101508: platform 3
+    101510: platform 4
+    101512: platform 5
+    101514: platform 6
+    101516: platform 7
+    101518: platform 8
+    101520: playerCarrierBig
+    101522: playerName
+    101524: playExplo
+    101526: playExplo 1
+    101528: playExplo 2
+    101530: playExplo 3
+    101532: printRangeWarning
+    101534: printWarning
+    101536: printWarning (1)
+    101538: printWarning (1) 1
+    101540: printWarning (1) 2
+    101542: ram
+    101544: rangeTrigger
+    101546: rangeWarningTrigger
+    101548: Raptor
+    101550: RaptorDummy
+    101552: RaptorDummy 1
+    101554: RaptorDummy 2
+    101556: RaptorDummy 3
+    101558: RaptorDummy 4
+    101560: RaptorDummy 5
+    101562: RaptorDummy 6
+    101564: RaptorDummy 7
+    101566: RaptorPrefab
+    101568: RaptorPrefab 1
+    101570: RaptorPrefab 2
+    101572: RaptorPrefab 3
+    101574: raptorWing
+    101576: RB
+    101578: RB 1
+    101580: RB_section
+    101582: Reflection Probe
+    101584: Reflection Probe 1
+    101586: repairingSprite
+    101588: repairingSprite2
+    101590: repairSprite
+    101592: RF
+    101594: RF 1
+    101596: RF_section
+    101598: Rocket
+    101600: Rocket 1
+    101602: RocketF
+    101604: RocketF 1
+    101606: rocketFL
+    101608: rocketFR
+    101610: rocketL
+    101612: rocketL 1
+    101614: rocketL 2
+    101616: rocketL 3
+    101618: rocketL 4
+    101620: rocketR
+    101622: rocketR 1
+    101624: rocketR 2
+    101626: rocketR 3
+    101628: rocketR 4
+    101630: scorePlate
+    101632: ScorpionA
+    101634: scorpionWing
+    101636: sealedEffect
+    101638: sealedEffect 1
+    101640: sealedEffect 2
+    101642: sealedEffect 3
+    101644: sealedEffect 4
+    101646: sealedEffect 5
+    101648: sealedEffect 6
+    101650: sealedEffect 7
+    101652: Smoke
+    101654: smoke
+    101656: Smoke 1
+    101658: smoke 1
+    101660: Smoke 2
+    101662: Smoke 3
+    101664: Smoke 4
+    101666: Smoke 5
+    101668: Smoke 6
+    101670: Smoke 7
+    101672: Smoke 8
+    101674: SmokeL
+    101676: SmokeR
+    101678: SmokeR 1
+    101680: sprite
+    101682: sprite 1
+    101684: Structure
+    101686: Sun
+    101688: Sun 1
+    101690: Sun2
+    101692: SunTerrain
+    101694: tank
+    101696: text
+    101698: textRoot
+    101700: thorL_wreck
+    101702: thorR_wreck
+    101704: tomcat
+    101706: tomcatAfterTank
+    101708: tomcatDummy
+    101710: trail
+    101712: trail 1
+    101714: trail 2
+    101716: trail 3
+    101718: TrailL
+    101720: TrailL 1
+    101722: TrailL 10
+    101724: TrailL 11
+    101726: TrailL 12
+    101728: TrailL 13
+    101730: TrailL 14
+    101732: TrailL 15
+    101734: TrailL 2
+    101736: TrailL 3
+    101738: TrailL 4
+    101740: TrailL 5
+    101742: TrailL 6
+    101744: TrailL 7
+    101746: TrailL 8
+    101748: TrailL 9
+    101750: TrailR
+    101752: TrailR 1
+    101754: TrailR 10
+    101756: TrailR 11
+    101758: TrailR 12
+    101760: TrailR 13
+    101762: TrailR 14
+    101764: TrailR 15
+    101766: TrailR 2
+    101768: TrailR 3
+    101770: TrailR 4
+    101772: TrailR 5
+    101774: TrailR 6
+    101776: TrailR 7
+    101778: TrailR 8
+    101780: TrailR 9
+    101782: turret
+    101784: turret 1
+    101786: turret_base
+    101788: turret_section
+    101790: upgrade
+    101792: upgrade 1
+    101794: upgrade_section
+    101796: upgradeL
+    101798: upgradeL 1
+    101800: upgradeL_section
+    101802: upgradeR
+    101804: upgradeR_section
+    101806: water
+    101808: water 1
+    101810: wave1
+    101812: wave2
+    101814: wave55
+    101816: wave55-90
+    101818: wave8-13-21-34
+    101820: wave90
+    101822: wave90B
+    101824: wave90Clear
+    101826: wingBL
+    101828: wingBL 1
+    101830: wingBL 2
+    101832: wingBL 3
+    101834: wingBL 4
+    101836: wingBL_wreck
+    101838: wingBL_wreck 1
+    101840: wingBL_wreck 2
+    101842: wingBL_wreck 3
+    101844: wingBR
+    101846: wingBR 1
+    101848: wingBR 2
+    101850: wingBR 3
+    101852: wingBR 4
+    101854: wingBR_wreck
+    101856: wingBR_wreck 1
+    101858: wingBR_wreck 2
+    101860: wingBR_wreck 3
+    101862: wingCL
+    101864: wingCR
+    101866: wingFL
+    101868: wingFL 1
+    101870: wingFL 2
+    101872: wingFL 3
+    101874: wingFL 4
+    101876: wingFL_wreck
+    101878: wingFL_wreck 1
+    101880: wingFL_wreck 2
+    101882: wingFL_wreck 3
+    101884: wingFR
+    101886: wingFR 1
+    101888: wingFR 2
+    101890: wingFR 3
+    101892: wingFR 4
+    101894: wingFR_wreck
+    101896: wingFR_wreck 1
+    101898: wingFR_wreck 2
+    101900: wingFR_wreck 3
+    101902: wingL
+    101904: wingL_in
+    101906: wingL_section
+    101908: wingL_section 1
+    101910: wingR
+    101912: wingR_in
+    101914: wingR_section
+    101916: wingR_section 1
+    101918: wingsTrigger
+    101920: wingSuperWing
+    101922: wingWing
+    101924: wreck
+    101926: wreck 1
+    101928: wreck 10
+    101930: wreck 11
+    101932: wreck 12
+    101934: wreck 13
+    101936: wreck 14
+    101938: wreck 15
+    101940: wreck 16
+    101942: wreck 17
+    101944: wreck 18
+    101946: wreck 19
+    101948: wreck 2
+    101950: wreck 20
+    101952: wreck 21
+    101954: wreck 22
+    101956: wreck 23
+    101958: wreck 24
+    101960: wreck 25
+    101962: wreck 26
+    101964: wreck 27
+    101966: wreck 28
+    101968: wreck 3
+    101970: wreck 4
+    101972: wreck 5
+    101974: wreck 6
+    101976: wreck 7
+    101978: wreck 8
+    101980: wreck 9
+    400000: AA
+    400002: AABullet
+    400004: AfterburnL
+    400006: AfterburnL 1
+    400008: AfterburnL 2
+    400010: AfterburnL 3
+    400012: AfterburnR
+    400014: AfterburnR 1
+    400016: AfterburnR 2
+    400018: AfterburnR 3
+    400020: AfterburnR 4
+    400022: AngelF
+    400024: armored
+    400026: B
+    400028: back
+    400030: back 1
+    400032: back 2
+    400034: back 3
+    400036: back_wreck
+    400038: back_wreck (1)
+    400040: back_wreck (1) 1
+    400042: back_wreck (1) 2
+    400044: back_wreck (1) 3
+    400046: back_wreck 1
+    400048: back_wreck 2
+    400050: back_wreck 3
+    400052: baptized
+    400054: beam
+    400056: beam 1
+    400058: beam 2
+    400060: beam 3
+    400062: beam_damaged
+    400064: beam_damaged 1
+    400066: beam_damaged 2
+    400068: beam_damaged 3
+    400070: BL
+    400072: BL_wreck
+    400074: black
+    400076: Body
+    400078: body
+    400080: Body 1
+    400082: body 1
+    400084: Body 10
+    400086: Body 11
+    400088: Body 2
+    400090: body 2
+    400092: Body 3
+    400094: body 3
+    400096: Body 4
+    400098: Body 5
+    400100: Body 6
+    400102: Body 7
+    400104: Body 8
+    400106: Body 9
+    400108: Bomber
+    400110: Bomber (1)
+    400112: Bomber (2)
+    400114: Bomber 1
+    400116: bomberDummy
+    400118: bomberDummy 1
+    400120: bomberDummy 2
+    400122: bomberDummy 3
+    400124: bomberDummy 4
+    400126: bomberDummy 5
+    400128: bomberDummy 6
+    400130: bomberDummy 7
+    400132: bombersWing
+    400134: bomberWing
+    400136: Boost
+    400138: Boost 1
+    400140: Boost 2
+    400142: BoostL
+    400144: BoostR
+    400146: BoostR 1
+    400148: BR
+    400150: BR_wreck
+    400152: Bullet
+    400154: Bullet 1
+    400156: bulletBeam
+    400158: bulletBeam 1
+    400160: BulletFF
+    400162: BulletFF 1
+    400164: BulletHH
+    400166: BulletHH 1
+    400168: BulletR
+    400170: BulletR 1
+    400172: BulletScorpion
+    400174: BulletScorpion 1
+    400176: C
+    400178: camTarget
+    400180: camTarget 1
+    400182: cannon
+    400184: cannon 1
+    400186: cannon 2
+    400188: cannonFF
+    400190: cannonFF 1
+    400192: cannonFF 2
+    400194: cannonL
+    400196: cannonL 1
+    400198: cannonL 10
+    400200: cannonL 11
+    400202: cannonL 12
+    400204: cannonL 13
+    400206: cannonL 14
+    400208: cannonL 15
+    400210: cannonL 16
+    400212: cannonL 17
+    400214: cannonL 18
+    400216: cannonL 19
+    400218: cannonL 2
+    400220: cannonL 20
+    400222: cannonL 3
+    400224: cannonL 4
+    400226: cannonL 5
+    400228: cannonL 6
+    400230: cannonL 7
+    400232: cannonL 8
+    400234: cannonL 9
+    400236: cannonR
+    400238: cannonR 1
+    400240: cannonR 10
+    400242: cannonR 11
+    400244: cannonR 12
+    400246: cannonR 13
+    400248: cannonR 14
+    400250: cannonR 15
+    400252: cannonR 16
+    400254: cannonR 17
+    400256: cannonR 18
+    400258: cannonR 19
+    400260: cannonR 2
+    400262: cannonR 20
+    400264: cannonR 3
+    400266: cannonR 4
+    400268: cannonR 5
+    400270: cannonR 6
+    400272: cannonR 7
+    400274: cannonR 8
+    400276: cannonR 9
+    400278: carrier1
+    400280: carrier2
+    400282: carrierOnRangeWing
+    400284: carriers
+    400286: carrierSmall
+    400288: carrierSmall 1
+    400290: carrierSmall 2
+    400292: carrierSmall 3
+    400294: carriersWing
+    400296: carrierWing
+    400298: center
+    400300: center 1
+    400302: center 2
+    400304: center 3
+    400306: center_wreck
+    400308: center_wreck 1
+    400310: center_wreck 2
+    400312: center_wreck 3
+    400314: client
+    400316: cloud
+    400318: cloud (1)
+    400320: cloud (1) 1
+    400322: cloud (2)
+    400324: cloud (2) 1
+    400326: cloud (3)
+    400328: cloud (3) 1
+    400330: cloud (4)
+    400332: cloud (4) 1
+    400334: cloud (5)
+    400336: cloud (5) 1
+    400338: cloud 1
+    400340: clouds
+    400342: clouds 1
+    400344: Cylinder_003_MeshPart0
+    400346: Cylinder_003_MeshPart1
+    400348: damaged
+    400350: damagedB
+    400352: damagedF
+    400354: day1
+    400356: day2
+    400358: desert
+    400360: desert 1
+    400362: desert 2
+    400364: desert_001
+    400366: desert_002
+    400368: desert_003
+    400370: desert_004
+    400372: desert_005
+    400374: desert_006
+    400376: desert_007
+    400378: desert_008
+    400380: desert_009
+    400382: desert_010
+    400384: desert_011
+    400386: desert_012
+    400388: doorB
+    400390: doorB 1
+    400392: doorB 2
+    400394: doorB 3
+    400396: doorB 4
+    400398: doorB 5
+    400400: doorB 6
+    400402: doorB 7
+    400404: doorB 8
+    400406: doorF
+    400408: doorF 1
+    400410: doorF 2
+    400412: doorF 3
+    400414: doorF 4
+    400416: doorF 5
+    400418: doorF 6
+    400420: doorF 7
+    400422: doorF 8
+    400424: elevator
+    400426: elevator 1
+    400428: elevator 2
+    400430: elevator 3
+    400432: elevator 4
+    400434: elevator_damaged
+    400436: elevator_damaged 1
+    400438: elevator_damaged 2
+    400440: elevator_damaged 3
+    400442: endGame
+    400444: engineL
+    400446: engineR
+    400448: fan
+    400450: fan (1)
+    400452: fan (1) 1
+    400454: fan (1) 2
+    400456: fan (1) 3
+    400458: fan (1) 4
+    400460: fan (2)
+    400462: fan (3)
+    400464: fan (3) 1
+    400466: fan (3) 2
+    400468: fan (3) 3
+    400470: fan (3) 4
+    400472: fan (4)
+    400474: fan (4) 1
+    400476: fan (4) 2
+    400478: fan (4) 3
+    400480: fan (4) 4
+    400482: fan (5)
+    400484: fan 1
+    400486: fan 2
+    400488: fan 3
+    400490: fan 4
+    400492: FL
+    400494: FL_wreck
+    400496: Flames
+    400498: flames
+    400500: flames (1)
+    400502: flames (1) 1
+    400504: flames (1) 2
+    400506: flames (1) 3
+    400508: flames (2)
+    400510: flames (2) 1
+    400512: flames (2) 10
+    400514: flames (2) 11
+    400516: flames (2) 12
+    400518: flames (2) 13
+    400520: flames (2) 14
+    400522: flames (2) 15
+    400524: flames (2) 16
+    400526: flames (2) 2
+    400528: flames (2) 3
+    400530: flames (2) 4
+    400532: flames (2) 5
+    400534: flames (2) 6
+    400536: flames (2) 7
+    400538: flames (2) 8
+    400540: flames (2) 9
+    400542: flames (3)
+    400544: flames (3) 1
+    400546: flames (3) 10
+    400548: flames (3) 11
+    400550: flames (3) 12
+    400552: flames (3) 2
+    400554: flames (3) 3
+    400556: flames (3) 4
+    400558: flames (3) 5
+    400560: flames (3) 6
+    400562: flames (3) 7
+    400564: flames (3) 8
+    400566: flames (3) 9
+    400568: flames (4)
+    400570: flames (4) 1
+    400572: flames (4) 2
+    400574: flames (4) 3
+    400576: flames (4) 4
+    400578: Flames 1
+    400580: flames 1
+    400582: Flames 10
+    400584: flames 10
+    400586: Flames 11
+    400588: flames 11
+    400590: Flames 12
+    400592: flames 12
+    400594: Flames 13
+    400596: flames 13
+    400598: Flames 14
+    400600: flames 14
+    400602: Flames 15
+    400604: Flames 16
+    400606: Flames 17
+    400608: Flames 18
+    400610: Flames 19
+    400612: Flames 2
+    400614: flames 2
+    400616: Flames 20
+    400618: Flames 21
+    400620: Flames 22
+    400622: Flames 23
+    400624: Flames 24
+    400626: Flames 25
+    400628: Flames 26
+    400630: Flames 27
+    400632: Flames 28
+    400634: Flames 29
+    400636: Flames 3
+    400638: flames 3
+    400640: Flames 30
+    400642: Flames 31
+    400644: Flames 32
+    400646: Flames 33
+    400648: Flames 34
+    400650: Flames 35
+    400652: Flames 36
+    400654: Flames 37
+    400656: Flames 38
+    400658: Flames 39
+    400660: Flames 4
+    400662: flames 4
+    400664: Flames 40
+    400666: Flames 41
+    400668: Flames 42
+    400670: Flames 43
+    400672: Flames 44
+    400674: Flames 45
+    400676: Flames 46
+    400678: Flames 47
+    400680: Flames 48
+    400682: Flames 49
+    400684: Flames 5
+    400686: flames 5
+    400688: Flames 6
+    400690: flames 6
+    400692: Flames 7
+    400694: flames 7
+    400696: Flames 8
+    400698: flames 8
+    400700: Flames 9
+    400702: flames 9
+    400704: FlamesL
+    400706: FlamesR
+    400708: FlamesR 1
+    400710: Flash
+    400712: flash
+    400714: flash (1)
+    400716: flash (1) 1
+    400718: Flash 1
+    400720: flash 1
+    400722: Flash 10
+    400724: flash 10
+    400726: Flash 11
+    400728: flash 11
+    400730: Flash 12
+    400732: flash 12
+    400734: Flash 13
+    400736: flash 13
+    400738: Flash 14
+    400740: flash 14
+    400742: Flash 15
+    400744: flash 15
+    400746: Flash 16
+    400748: flash 16
+    400750: Flash 17
+    400752: flash 17
+    400754: Flash 18
+    400756: flash 18
+    400758: Flash 19
+    400760: flash 19
+    400762: Flash 2
+    400764: flash 2
+    400766: Flash 20
+    400768: flash 20
+    400770: Flash 21
+    400772: flash 21
+    400774: Flash 22
+    400776: flash 22
+    400778: Flash 23
+    400780: flash 23
+    400782: Flash 24
+    400784: flash 24
+    400786: Flash 25
+    400788: flash 25
+    400790: Flash 26
+    400792: flash 26
+    400794: Flash 27
+    400796: flash 27
+    400798: Flash 28
+    400800: flash 28
+    400802: Flash 29
+    400804: flash 29
+    400806: Flash 3
+    400808: flash 3
+    400810: Flash 30
+    400812: flash 30
+    400814: Flash 31
+    400816: flash 31
+    400818: Flash 32
+    400820: flash 32
+    400822: Flash 33
+    400824: flash 33
+    400826: Flash 34
+    400828: flash 34
+    400830: Flash 35
+    400832: flash 35
+    400834: Flash 36
+    400836: flash 36
+    400838: Flash 37
+    400840: flash 37
+    400842: Flash 38
+    400844: flash 38
+    400846: Flash 39
+    400848: flash 39
+    400850: Flash 4
+    400852: flash 4
+    400854: Flash 40
+    400856: flash 40
+    400858: Flash 41
+    400860: flash 41
+    400862: Flash 42
+    400864: flash 42
+    400866: Flash 43
+    400868: flash 43
+    400870: Flash 44
+    400872: flash 44
+    400874: Flash 45
+    400876: flash 45
+    400878: Flash 46
+    400880: flash 46
+    400882: Flash 47
+    400884: flash 47
+    400886: Flash 48
+    400888: flash 48
+    400890: Flash 49
+    400892: flash 49
+    400894: Flash 5
+    400896: flash 5
+    400898: Flash 50
+    400900: flash 50
+    400902: Flash 51
+    400904: flash 51
+    400906: Flash 52
+    400908: flash 52
+    400910: Flash 53
+    400912: flash 53
+    400914: Flash 54
+    400916: flash 54
+    400918: Flash 55
+    400920: flash 55
+    400922: Flash 56
+    400924: flash 56
+    400926: Flash 57
+    400928: flash 57
+    400930: Flash 58
+    400932: flash 58
+    400934: flash 59
+    400936: Flash 6
+    400938: flash 6
+    400940: flash 60
+    400942: flash 61
+    400944: flash 62
+    400946: flash 63
+    400948: Flash 7
+    400950: flash 7
+    400952: Flash 8
+    400954: flash 8
+    400956: Flash 9
+    400958: flash 9
+    400960: FR
+    400962: FR_wreck
+    400964: frags
+    400966: frags 1
+    400968: frags 10
+    400970: frags 11
+    400972: frags 12
+    400974: frags 13
+    400976: frags 14
+    400978: frags 15
+    400980: frags 16
+    400982: frags 17
+    400984: frags 18
+    400986: frags 19
+    400988: frags 2
+    400990: frags 20
+    400992: frags 21
+    400994: frags 22
+    400996: frags 23
+    400998: frags 24
+    401000: frags 25
+    401002: frags 26
+    401004: frags 27
+    401006: frags 28
+    401008: frags 29
+    401010: frags 3
+    401012: frags 30
+    401014: frags 31
+    401016: frags 32
+    401018: frags 33
+    401020: frags 34
+    401022: frags 35
+    401024: frags 36
+    401026: frags 37
+    401028: frags 38
+    401030: frags 39
+    401032: frags 4
+    401034: frags 40
+    401036: frags 41
+    401038: frags 42
+    401040: frags 43
+    401042: frags 44
+    401044: frags 45
+    401046: frags 46
+    401048: frags 47
+    401050: frags 48
+    401052: frags 49
+    401054: frags 5
+    401056: frags 50
+    401058: frags 51
+    401060: frags 52
+    401062: frags 53
+    401064: frags 54
+    401066: frags 55
+    401068: frags 56
+    401070: frags 57
+    401072: frags 58
+    401074: frags 59
+    401076: frags 6
+    401078: frags 60
+    401080: frags 61
+    401082: frags 62
+    401084: frags 63
+    401086: frags 64
+    401088: frags 65
+    401090: frags 66
+    401092: frags 67
+    401094: frags 68
+    401096: frags 69
+    401098: frags 7
+    401100: frags 70
+    401102: frags 71
+    401104: frags 72
+    401106: frags 73
+    401108: frags 74
+    401110: frags 75
+    401112: frags 76
+    401114: frags 77
+    401116: frags 78
+    401118: frags 79
+    401120: frags 8
+    401122: frags 80
+    401124: frags 81
+    401126: frags 82
+    401128: frags 9
+    401130: frags_cannon
+    401132: frags_cannon 1
+    401134: frags_cannon 2
+    401136: frags_cannon 3
+    401138: front
+    401140: front 1
+    401142: front 2
+    401144: front 3
+    401146: front_wreck
+    401148: front_wreck 1
+    401150: front_wreck 2
+    401152: front_wreck 3
+    401154: front_wreck 4
+    401156: front_wreck 5
+    401158: front_wreck 6
+    401160: front_wreck 7
+    401162: front_wreck 8
+    401164: frustumTest
+    401166: //RootNode
+    401168: GameManager
+    401170: GameObject (1)
+    401172: goBackArrow
+    401174: goBackArrow 1
+    401176: hudArrow
+    401178: hudArrow 1
+    401180: HUDCenter
+    401182: HUDCountdown
+    401184: hudText
+    401186: hull
+    401188: hull 1
+    401190: hull 10
+    401192: hull 11
+    401194: hull 12
+    401196: hull 13
+    401198: hull 14
+    401200: hull 15
+    401202: hull 16
+    401204: hull 17
+    401206: hull 18
+    401208: hull 19
+    401210: hull 2
+    401212: hull 20
+    401214: hull 21
+    401216: hull 22
+    401218: hull 23
+    401220: hull 24
+    401222: hull 25
+    401224: hull 26
+    401226: hull 27
+    401228: hull 28
+    401230: hull 29
+    401232: hull 3
+    401234: hull 30
+    401236: hull 31
+    401238: hull 32
+    401240: hull 33
+    401242: hull 34
+    401244: hull 35
+    401246: hull 36
+    401248: hull 37
+    401250: hull 38
+    401252: hull 39
+    401254: hull 4
+    401256: hull 40
+    401258: hull 41
+    401260: hull 42
+    401262: hull 43
+    401264: hull 44
+    401266: hull 45
+    401268: hull 46
+    401270: hull 47
+    401272: hull 48
+    401274: hull 49
+    401276: hull 5
+    401278: hull 50
+    401280: hull 51
+    401282: hull 52
+    401284: hull 53
+    401286: hull 54
+    401288: hull 55
+    401290: hull 56
+    401292: hull 57
+    401294: hull 58
+    401296: hull 59
+    401298: hull 6
+    401300: hull 60
+    401302: hull 7
+    401304: hull 8
+    401306: hull 9
+    401308: hull_damaged
+    401310: hull_wreck
+    401312: hull_wreck 1
+    401314: hull_wreck 2
+    401316: hull_wreck 3
+    401318: hullB
+    401320: hullB_wreck
+    401322: hullC
+    401324: hullC_wreck
+    401326: hullF
+    401328: hullF_wreck
+    401330: Impact
+    401332: impact
+    401334: Impact 1
+    401336: impact 1
+    401338: Impact 10
+    401340: Impact 11
+    401342: Impact 12
+    401344: Impact 13
+    401346: Impact 14
+    401348: Impact 15
+    401350: Impact 2
+    401352: Impact 3
+    401354: Impact 4
+    401356: Impact 5
+    401358: Impact 6
+    401360: Impact 7
+    401362: Impact 8
+    401364: Impact 9
+    401366: inputController
+    401368: Jet
+    401370: Jet (1)
+    401372: Jet (1) 1
+    401374: Jet (2)
+    401376: Jet (2) 1
+    401378: Jet (3)
+    401380: Jet (3) 1
+    401382: Jet (4)
+    401384: Jet (4) 1
+    401386: Jet (5)
+    401388: Jet (5) 1
+    401390: Jet (6)
+    401392: Jet (7)
+    401394: Jet (8)
+    401396: Jet (9)
+    401398: jetDummy1
+    401400: jetDummy1 1
+    401402: jetDummy1 2
+    401404: jetDummy1 3
+    401406: jetDummy1 4
+    401408: jetDummy1 5
+    401410: jetDummy1 6
+    401412: jetDummy1 7
+    401414: jetDummy2
+    401416: jetDummy2 1
+    401418: jetDummy2 2
+    401420: jetDummy2 3
+    401422: jetDummy2 4
+    401424: jetDummy2 5
+    401426: jetDummy2 6
+    401428: jetDummy2 7
+    401430: jetPrefab
+    401432: jetWing
+    401434: label
+    401436: label 1
+    401438: label 2
+    401440: LB
+    401442: LB_section
+    401444: left_wreck
+    401446: LF
+    401448: LF_section
+    401450: line
+    401452: lineBig
+    401454: lineBig (2)
+    401456: linePlayer
+    401458: lineWorld
+    401460: Main Camera
+    401462: mark2
+    401464: mark2L
+    401466: mark2R
+    401468: marker
+    401470: mesh
+    401472: Mine
+    401474: Mine 1
+    401476: MineL
+    401478: MineR
+    401480: Miner
+    401482: minerWing
+    401484: Mines
+    401486: mothership
+    401488: music
+    401490: muzzle
+    401492: muzzle 1
+    401494: onEscape
+    401496: onMothershipDeath
+    401498: onPlayerDeath
+    401500: onStart
+    401502: platform
+    401504: platform 1
+    401506: platform 2
+    401508: platform 3
+    401510: platform 4
+    401512: platform 5
+    401514: platform 6
+    401516: platform 7
+    401518: platform 8
+    401520: playerCarrierBig
+    401522: playerName
+    401524: playExplo
+    401526: playExplo 1
+    401528: playExplo 2
+    401530: playExplo 3
+    401532: printRangeWarning
+    401534: printWarning
+    401536: printWarning (1)
+    401538: printWarning (1) 1
+    401540: printWarning (1) 2
+    401542: ram
+    401544: rangeTrigger
+    401546: rangeWarningTrigger
+    401548: Raptor
+    401550: RaptorDummy
+    401552: RaptorDummy 1
+    401554: RaptorDummy 2
+    401556: RaptorDummy 3
+    401558: RaptorDummy 4
+    401560: RaptorDummy 5
+    401562: RaptorDummy 6
+    401564: RaptorDummy 7
+    401566: RaptorPrefab
+    401568: RaptorPrefab 1
+    401570: RaptorPrefab 2
+    401572: RaptorPrefab 3
+    401574: raptorWing
+    401576: RB
+    401578: RB 1
+    401580: RB_section
+    401582: Reflection Probe
+    401584: Reflection Probe 1
+    401586: repairingSprite
+    401588: repairingSprite2
+    401590: repairSprite
+    401592: RF
+    401594: RF 1
+    401596: RF_section
+    401598: Rocket
+    401600: Rocket 1
+    401602: RocketF
+    401604: RocketF 1
+    401606: rocketFL
+    401608: rocketFR
+    401610: rocketL
+    401612: rocketL 1
+    401614: rocketL 2
+    401616: rocketL 3
+    401618: rocketL 4
+    401620: rocketR
+    401622: rocketR 1
+    401624: rocketR 2
+    401626: rocketR 3
+    401628: rocketR 4
+    401630: scorePlate
+    401632: ScorpionA
+    401634: scorpionWing
+    401636: sealedEffect
+    401638: sealedEffect 1
+    401640: sealedEffect 2
+    401642: sealedEffect 3
+    401644: sealedEffect 4
+    401646: sealedEffect 5
+    401648: sealedEffect 6
+    401650: sealedEffect 7
+    401652: Smoke
+    401654: smoke
+    401656: Smoke 1
+    401658: smoke 1
+    401660: Smoke 2
+    401662: Smoke 3
+    401664: Smoke 4
+    401666: Smoke 5
+    401668: Smoke 6
+    401670: Smoke 7
+    401672: Smoke 8
+    401674: SmokeL
+    401676: SmokeR
+    401678: SmokeR 1
+    401680: sprite
+    401682: sprite 1
+    401684: Structure
+    401686: Sun
+    401688: Sun 1
+    401690: Sun2
+    401692: SunTerrain
+    401694: tank
+    401696: text
+    401698: textRoot
+    401700: thorL_wreck
+    401702: thorR_wreck
+    401704: tomcat
+    401706: tomcatAfterTank
+    401708: tomcatDummy
+    401710: trail
+    401712: trail 1
+    401714: trail 2
+    401716: trail 3
+    401718: TrailL
+    401720: TrailL 1
+    401722: TrailL 10
+    401724: TrailL 11
+    401726: TrailL 12
+    401728: TrailL 13
+    401730: TrailL 14
+    401732: TrailL 15
+    401734: TrailL 2
+    401736: TrailL 3
+    401738: TrailL 4
+    401740: TrailL 5
+    401742: TrailL 6
+    401744: TrailL 7
+    401746: TrailL 8
+    401748: TrailL 9
+    401750: TrailR
+    401752: TrailR 1
+    401754: TrailR 10
+    401756: TrailR 11
+    401758: TrailR 12
+    401760: TrailR 13
+    401762: TrailR 14
+    401764: TrailR 15
+    401766: TrailR 2
+    401768: TrailR 3
+    401770: TrailR 4
+    401772: TrailR 5
+    401774: TrailR 6
+    401776: TrailR 7
+    401778: TrailR 8
+    401780: TrailR 9
+    401782: turret
+    401784: turret 1
+    401786: turret_base
+    401788: turret_section
+    401790: upgrade
+    401792: upgrade 1
+    401794: upgrade_section
+    401796: upgradeL
+    401798: upgradeL 1
+    401800: upgradeL_section
+    401802: upgradeR
+    401804: upgradeR_section
+    401806: water
+    401808: water 1
+    401810: wave1
+    401812: wave2
+    401814: wave55
+    401816: wave55-90
+    401818: wave8-13-21-34
+    401820: wave90
+    401822: wave90B
+    401824: wave90Clear
+    401826: wingBL
+    401828: wingBL 1
+    401830: wingBL 2
+    401832: wingBL 3
+    401834: wingBL 4
+    401836: wingBL_wreck
+    401838: wingBL_wreck 1
+    401840: wingBL_wreck 2
+    401842: wingBL_wreck 3
+    401844: wingBR
+    401846: wingBR 1
+    401848: wingBR 2
+    401850: wingBR 3
+    401852: wingBR 4
+    401854: wingBR_wreck
+    401856: wingBR_wreck 1
+    401858: wingBR_wreck 2
+    401860: wingBR_wreck 3
+    401862: wingCL
+    401864: wingCR
+    401866: wingFL
+    401868: wingFL 1
+    401870: wingFL 2
+    401872: wingFL 3
+    401874: wingFL 4
+    401876: wingFL_wreck
+    401878: wingFL_wreck 1
+    401880: wingFL_wreck 2
+    401882: wingFL_wreck 3
+    401884: wingFR
+    401886: wingFR 1
+    401888: wingFR 2
+    401890: wingFR 3
+    401892: wingFR 4
+    401894: wingFR_wreck
+    401896: wingFR_wreck 1
+    401898: wingFR_wreck 2
+    401900: wingFR_wreck 3
+    401902: wingL
+    401904: wingL_in
+    401906: wingL_section
+    401908: wingL_section 1
+    401910: wingR
+    401912: wingR_in
+    401914: wingR_section
+    401916: wingR_section 1
+    401918: wingsTrigger
+    401920: wingSuperWing
+    401922: wingWing
+    401924: wreck
+    401926: wreck 1
+    401928: wreck 10
+    401930: wreck 11
+    401932: wreck 12
+    401934: wreck 13
+    401936: wreck 14
+    401938: wreck 15
+    401940: wreck 16
+    401942: wreck 17
+    401944: wreck 18
+    401946: wreck 19
+    401948: wreck 2
+    401950: wreck 20
+    401952: wreck 21
+    401954: wreck 22
+    401956: wreck 23
+    401958: wreck 24
+    401960: wreck 25
+    401962: wreck 26
+    401964: wreck 27
+    401966: wreck 28
+    401968: wreck 3
+    401970: wreck 4
+    401972: wreck 5
+    401974: wreck 6
+    401976: wreck 7
+    401978: wreck 8
+    401980: wreck 9
+    2300000: back
+    2300002: back 1
+    2300004: back 2
+    2300006: back 3
+    2300008: back_wreck
+    2300010: back_wreck (1)
+    2300012: back_wreck (1) 1
+    2300014: back_wreck (1) 2
+    2300016: back_wreck (1) 3
+    2300018: back_wreck 1
+    2300020: back_wreck 2
+    2300022: back_wreck 3
+    2300024: BL
+    2300026: BL_wreck
+    2300028: Body
+    2300030: body
+    2300032: Body 1
+    2300034: body 1
+    2300036: Body 10
+    2300038: Body 11
+    2300040: Body 2
+    2300042: body 2
+    2300044: Body 3
+    2300046: body 3
+    2300048: Body 4
+    2300050: Body 5
+    2300052: Body 6
+    2300054: Body 7
+    2300056: Body 8
+    2300058: Body 9
+    2300060: bomberDummy
+    2300062: bomberDummy 1
+    2300064: bomberDummy 2
+    2300066: bomberDummy 3
+    2300068: bomberDummy 4
+    2300070: bomberDummy 5
+    2300072: bomberDummy 6
+    2300074: bomberDummy 7
+    2300076: BR
+    2300078: BR_wreck
+    2300080: cannon
+    2300082: cannon 1
+    2300084: cannon 2
+    2300086: center
+    2300088: center 1
+    2300090: center 2
+    2300092: center 3
+    2300094: center_wreck
+    2300096: center_wreck 1
+    2300098: center_wreck 2
+    2300100: center_wreck 3
+    2300102: cloud
+    2300104: cloud (1)
+    2300106: cloud (1) 1
+    2300108: cloud (2)
+    2300110: cloud (2) 1
+    2300112: cloud (3)
+    2300114: cloud (3) 1
+    2300116: cloud (4)
+    2300118: cloud (4) 1
+    2300120: cloud (5)
+    2300122: cloud (5) 1
+    2300124: cloud 1
+    2300126: Cylinder_003_MeshPart0
+    2300128: Cylinder_003_MeshPart1
+    2300130: desert 2
+    2300132: desert_001
+    2300134: desert_002
+    2300136: desert_003
+    2300138: desert_004
+    2300140: desert_005
+    2300142: desert_006
+    2300144: desert_007
+    2300146: desert_008
+    2300148: desert_009
+    2300150: desert_010
+    2300152: desert_011
+    2300154: desert_012
+    2300156: doorB
+    2300158: doorB 1
+    2300160: doorB 2
+    2300162: doorB 3
+    2300164: doorB 4
+    2300166: doorB 5
+    2300168: doorB 6
+    2300170: doorB 7
+    2300172: doorB 8
+    2300174: doorF
+    2300176: doorF 1
+    2300178: doorF 2
+    2300180: doorF 3
+    2300182: doorF 4
+    2300184: doorF 5
+    2300186: doorF 6
+    2300188: doorF 7
+    2300190: doorF 8
+    2300192: engineL
+    2300194: engineR
+    2300196: fan
+    2300198: fan (1)
+    2300200: fan (1) 1
+    2300202: fan (1) 2
+    2300204: fan (1) 3
+    2300206: fan (1) 4
+    2300208: fan (2)
+    2300210: fan (3)
+    2300212: fan (3) 1
+    2300214: fan (3) 2
+    2300216: fan (3) 3
+    2300218: fan (3) 4
+    2300220: fan (4)
+    2300222: fan (4) 1
+    2300224: fan (4) 2
+    2300226: fan (4) 3
+    2300228: fan (4) 4
+    2300230: fan (5)
+    2300232: fan 1
+    2300234: fan 2
+    2300236: fan 3
+    2300238: fan 4
+    2300240: FL
+    2300242: FL_wreck
+    2300244: FR
+    2300246: FR_wreck
+    2300248: front
+    2300250: front 1
+    2300252: front 2
+    2300254: front 3
+    2300256: front_wreck
+    2300258: front_wreck 1
+    2300260: front_wreck 2
+    2300262: front_wreck 3
+    2300264: front_wreck 4
+    2300266: front_wreck 5
+    2300268: front_wreck 6
+    2300270: front_wreck 7
+    2300272: front_wreck 8
+    2300274: frustumTest
+    2300276: hudArrow
+    2300278: hull
+    2300280: hull 1
+    2300282: hull 14
+    2300284: hull 15
+    2300286: hull 16
+    2300288: hull 17
+    2300290: hull 18
+    2300292: hull 19
+    2300294: hull 2
+    2300296: hull 20
+    2300298: hull 21
+    2300300: hull 22
+    2300302: hull 23
+    2300304: hull 24
+    2300306: hull 25
+    2300308: hull 26
+    2300310: hull 27
+    2300312: hull 28
+    2300314: hull 29
+    2300316: hull 30
+    2300318: hull 31
+    2300320: hull 32
+    2300322: hull 33
+    2300324: hull 34
+    2300326: hull 35
+    2300328: hull 36
+    2300330: hull 37
+    2300332: hull 38
+    2300334: hull 39
+    2300336: hull 4
+    2300338: hull 40
+    2300340: hull 41
+    2300342: hull 42
+    2300344: hull 43
+    2300346: hull 44
+    2300348: hull 45
+    2300350: hull 46
+    2300352: hull 47
+    2300354: hull 48
+    2300356: hull 49
+    2300358: hull 5
+    2300360: hull 50
+    2300362: hull 51
+    2300364: hull 52
+    2300366: hull 53
+    2300368: hull 54
+    2300370: hull 55
+    2300372: hull 56
+    2300374: hull 57
+    2300376: hull 58
+    2300378: hull 59
+    2300380: hull 6
+    2300382: hull 60
+    2300384: hull 7
+    2300386: hull 8
+    2300388: hull 9
+    2300390: hull_damaged
+    2300392: hull_wreck
+    2300394: hull_wreck 1
+    2300396: hull_wreck 2
+    2300398: hull_wreck 3
+    2300400: hullB
+    2300402: hullB_wreck
+    2300404: hullC
+    2300406: hullC_wreck
+    2300408: hullF
+    2300410: hullF_wreck
+    2300412: LB
+    2300414: LB_section
+    2300416: left_wreck
+    2300418: LF
+    2300420: LF_section
+    2300422: mark2
+    2300424: mark2L
+    2300426: mark2R
+    2300428: marker
+    2300430: mesh
+    2300432: platform
+    2300434: platform 1
+    2300436: platform 2
+    2300438: platform 3
+    2300440: platform 4
+    2300442: platform 5
+    2300444: platform 6
+    2300446: platform 7
+    2300448: platform 8
+    2300450: RB
+    2300452: RB 1
+    2300454: RB_section
+    2300456: repairingSprite
+    2300458: repairingSprite2
+    2300460: repairSprite
+    2300462: RF
+    2300464: RF 1
+    2300466: RF_section
+    2300468: scorePlate
+    2300470: sprite
+    2300472: sprite 1
+    2300474: Structure
+    2300476: thorL_wreck
+    2300478: thorR_wreck
+    2300480: turret
+    2300482: turret 1
+    2300484: turret_section
+    2300486: upgrade
+    2300488: upgrade 1
+    2300490: upgrade_section
+    2300492: upgradeL
+    2300494: upgradeL 1
+    2300496: upgradeL_section
+    2300498: upgradeR
+    2300500: upgradeR_section
+    2300502: water
+    2300504: water 1
+    2300506: wingBL
+    2300508: wingBL 1
+    2300510: wingBL 2
+    2300512: wingBL 3
+    2300514: wingBL 4
+    2300516: wingBL_wreck
+    2300518: wingBL_wreck 1
+    2300520: wingBL_wreck 2
+    2300522: wingBL_wreck 3
+    2300524: wingBR
+    2300526: wingBR 1
+    2300528: wingBR 2
+    2300530: wingBR 3
+    2300532: wingBR 4
+    2300534: wingBR_wreck
+    2300536: wingBR_wreck 1
+    2300538: wingBR_wreck 2
+    2300540: wingBR_wreck 3
+    2300542: wingCL
+    2300544: wingCR
+    2300546: wingFL
+    2300548: wingFL 1
+    2300550: wingFL 2
+    2300552: wingFL 3
+    2300554: wingFL 4
+    2300556: wingFL_wreck
+    2300558: wingFL_wreck 1
+    2300560: wingFL_wreck 2
+    2300562: wingFL_wreck 3
+    2300564: wingFR
+    2300566: wingFR 1
+    2300568: wingFR 2
+    2300570: wingFR 3
+    2300572: wingFR 4
+    2300574: wingFR_wreck
+    2300576: wingFR_wreck 1
+    2300578: wingFR_wreck 2
+    2300580: wingFR_wreck 3
+    2300582: wingL
+    2300584: wingL_section
+    2300586: wingL_section 1
+    2300588: wingR
+    2300590: wingR_section
+    2300592: wingR_section 1
+    2300594: wreck
+    2300596: wreck 1
+    2300598: wreck 10
+    2300600: wreck 11
+    2300602: wreck 12
+    2300604: wreck 13
+    2300606: wreck 14
+    2300608: wreck 15
+    2300610: wreck 16
+    2300612: wreck 17
+    2300614: wreck 18
+    2300616: wreck 19
+    2300618: wreck 2
+    2300620: wreck 20
+    2300622: wreck 21
+    2300624: wreck 22
+    2300626: wreck 23
+    2300628: wreck 24
+    2300630: wreck 25
+    2300632: wreck 26
+    2300634: wreck 27
+    2300636: wreck 28
+    2300638: wreck 3
+    2300640: wreck 4
+    2300642: wreck 5
+    2300644: wreck 6
+    2300646: wreck 7
+    2300648: wreck 8
+    2300650: wreck 9
+    3300000: back
+    3300002: back 1
+    3300004: back 2
+    3300006: back 3
+    3300008: back_wreck
+    3300010: back_wreck (1)
+    3300012: back_wreck (1) 1
+    3300014: back_wreck (1) 2
+    3300016: back_wreck (1) 3
+    3300018: back_wreck 1
+    3300020: back_wreck 2
+    3300022: back_wreck 3
+    3300024: BL
+    3300026: BL_wreck
+    3300028: Body
+    3300030: body
+    3300032: Body 1
+    3300034: body 1
+    3300036: Body 10
+    3300038: Body 11
+    3300040: Body 2
+    3300042: body 2
+    3300044: Body 3
+    3300046: body 3
+    3300048: Body 4
+    3300050: Body 5
+    3300052: Body 6
+    3300054: Body 7
+    3300056: Body 8
+    3300058: Body 9
+    3300060: bomberDummy
+    3300062: bomberDummy 1
+    3300064: bomberDummy 2
+    3300066: bomberDummy 3
+    3300068: bomberDummy 4
+    3300070: bomberDummy 5
+    3300072: bomberDummy 6
+    3300074: bomberDummy 7
+    3300076: BR
+    3300078: BR_wreck
+    3300080: cannon
+    3300082: cannon 1
+    3300084: cannon 2
+    3300086: center
+    3300088: center 1
+    3300090: center 2
+    3300092: center 3
+    3300094: center_wreck
+    3300096: center_wreck 1
+    3300098: center_wreck 2
+    3300100: center_wreck 3
+    3300102: cloud
+    3300104: cloud (1)
+    3300106: cloud (1) 1
+    3300108: cloud (2)
+    3300110: cloud (2) 1
+    3300112: cloud (3)
+    3300114: cloud (3) 1
+    3300116: cloud (4)
+    3300118: cloud (4) 1
+    3300120: cloud (5)
+    3300122: cloud (5) 1
+    3300124: cloud 1
+    3300126: Cylinder_003_MeshPart0
+    3300128: Cylinder_003_MeshPart1
+    3300130: desert 2
+    3300132: desert_001
+    3300134: desert_002
+    3300136: desert_003
+    3300138: desert_004
+    3300140: desert_005
+    3300142: desert_006
+    3300144: desert_007
+    3300146: desert_008
+    3300148: desert_009
+    3300150: desert_010
+    3300152: desert_011
+    3300154: desert_012
+    3300156: doorB
+    3300158: doorB 1
+    3300160: doorB 2
+    3300162: doorB 3
+    3300164: doorB 4
+    3300166: doorB 5
+    3300168: doorB 6
+    3300170: doorB 7
+    3300172: doorB 8
+    3300174: doorF
+    3300176: doorF 1
+    3300178: doorF 2
+    3300180: doorF 3
+    3300182: doorF 4
+    3300184: doorF 5
+    3300186: doorF 6
+    3300188: doorF 7
+    3300190: doorF 8
+    3300192: engineL
+    3300194: engineR
+    3300196: fan
+    3300198: fan (1)
+    3300200: fan (1) 1
+    3300202: fan (1) 2
+    3300204: fan (1) 3
+    3300206: fan (1) 4
+    3300208: fan (2)
+    3300210: fan (3)
+    3300212: fan (3) 1
+    3300214: fan (3) 2
+    3300216: fan (3) 3
+    3300218: fan (3) 4
+    3300220: fan (4)
+    3300222: fan (4) 1
+    3300224: fan (4) 2
+    3300226: fan (4) 3
+    3300228: fan (4) 4
+    3300230: fan (5)
+    3300232: fan 1
+    3300234: fan 2
+    3300236: fan 3
+    3300238: fan 4
+    3300240: FL
+    3300242: FL_wreck
+    3300244: FR
+    3300246: FR_wreck
+    3300248: front
+    3300250: front 1
+    3300252: front 2
+    3300254: front 3
+    3300256: front_wreck
+    3300258: front_wreck 1
+    3300260: front_wreck 2
+    3300262: front_wreck 3
+    3300264: front_wreck 4
+    3300266: front_wreck 5
+    3300268: front_wreck 6
+    3300270: front_wreck 7
+    3300272: front_wreck 8
+    3300274: frustumTest
+    3300276: hudArrow
+    3300278: hull
+    3300280: hull 1
+    3300282: hull 14
+    3300284: hull 15
+    3300286: hull 16
+    3300288: hull 17
+    3300290: hull 18
+    3300292: hull 19
+    3300294: hull 2
+    3300296: hull 20
+    3300298: hull 21
+    3300300: hull 22
+    3300302: hull 23
+    3300304: hull 24
+    3300306: hull 25
+    3300308: hull 26
+    3300310: hull 27
+    3300312: hull 28
+    3300314: hull 29
+    3300316: hull 30
+    3300318: hull 31
+    3300320: hull 32
+    3300322: hull 33
+    3300324: hull 34
+    3300326: hull 35
+    3300328: hull 36
+    3300330: hull 37
+    3300332: hull 38
+    3300334: hull 39
+    3300336: hull 4
+    3300338: hull 40
+    3300340: hull 41
+    3300342: hull 42
+    3300344: hull 43
+    3300346: hull 44
+    3300348: hull 45
+    3300350: hull 46
+    3300352: hull 47
+    3300354: hull 48
+    3300356: hull 49
+    3300358: hull 5
+    3300360: hull 50
+    3300362: hull 51
+    3300364: hull 52
+    3300366: hull 53
+    3300368: hull 54
+    3300370: hull 55
+    3300372: hull 56
+    3300374: hull 57
+    3300376: hull 58
+    3300378: hull 59
+    3300380: hull 6
+    3300382: hull 60
+    3300384: hull 7
+    3300386: hull 8
+    3300388: hull 9
+    3300390: hull_damaged
+    3300392: hull_wreck
+    3300394: hull_wreck 1
+    3300396: hull_wreck 2
+    3300398: hull_wreck 3
+    3300400: hullB
+    3300402: hullB_wreck
+    3300404: hullC
+    3300406: hullC_wreck
+    3300408: hullF
+    3300410: hullF_wreck
+    3300412: LB
+    3300414: LB_section
+    3300416: left_wreck
+    3300418: LF
+    3300420: LF_section
+    3300422: mark2
+    3300424: mark2L
+    3300426: mark2R
+    3300428: marker
+    3300430: mesh
+    3300432: platform
+    3300434: platform 1
+    3300436: platform 2
+    3300438: platform 3
+    3300440: platform 4
+    3300442: platform 5
+    3300444: platform 6
+    3300446: platform 7
+    3300448: platform 8
+    3300450: RB
+    3300452: RB 1
+    3300454: RB_section
+    3300456: repairingSprite
+    3300458: repairingSprite2
+    3300460: repairSprite
+    3300462: RF
+    3300464: RF 1
+    3300466: RF_section
+    3300468: scorePlate
+    3300470: sprite
+    3300472: sprite 1
+    3300474: Structure
+    3300476: thorL_wreck
+    3300478: thorR_wreck
+    3300480: turret
+    3300482: turret 1
+    3300484: turret_section
+    3300486: upgrade
+    3300488: upgrade 1
+    3300490: upgrade_section
+    3300492: upgradeL
+    3300494: upgradeL 1
+    3300496: upgradeL_section
+    3300498: upgradeR
+    3300500: upgradeR_section
+    3300502: water
+    3300504: water 1
+    3300506: wingBL
+    3300508: wingBL 1
+    3300510: wingBL 2
+    3300512: wingBL 3
+    3300514: wingBL 4
+    3300516: wingBL_wreck
+    3300518: wingBL_wreck 1
+    3300520: wingBL_wreck 2
+    3300522: wingBL_wreck 3
+    3300524: wingBR
+    3300526: wingBR 1
+    3300528: wingBR 2
+    3300530: wingBR 3
+    3300532: wingBR 4
+    3300534: wingBR_wreck
+    3300536: wingBR_wreck 1
+    3300538: wingBR_wreck 2
+    3300540: wingBR_wreck 3
+    3300542: wingCL
+    3300544: wingCR
+    3300546: wingFL
+    3300548: wingFL 1
+    3300550: wingFL 2
+    3300552: wingFL 3
+    3300554: wingFL 4
+    3300556: wingFL_wreck
+    3300558: wingFL_wreck 1
+    3300560: wingFL_wreck 2
+    3300562: wingFL_wreck 3
+    3300564: wingFR
+    3300566: wingFR 1
+    3300568: wingFR 2
+    3300570: wingFR 3
+    3300572: wingFR 4
+    3300574: wingFR_wreck
+    3300576: wingFR_wreck 1
+    3300578: wingFR_wreck 2
+    3300580: wingFR_wreck 3
+    3300582: wingL
+    3300584: wingL_section
+    3300586: wingL_section 1
+    3300588: wingR
+    3300590: wingR_section
+    3300592: wingR_section 1
+    3300594: wreck
+    3300596: wreck 1
+    3300598: wreck 10
+    3300600: wreck 11
+    3300602: wreck 12
+    3300604: wreck 13
+    3300606: wreck 14
+    3300608: wreck 15
+    3300610: wreck 16
+    3300612: wreck 17
+    3300614: wreck 18
+    3300616: wreck 19
+    3300618: wreck 2
+    3300620: wreck 20
+    3300622: wreck 21
+    3300624: wreck 22
+    3300626: wreck 23
+    3300628: wreck 24
+    3300630: wreck 25
+    3300632: wreck 26
+    3300634: wreck 27
+    3300636: wreck 28
+    3300638: wreck 3
+    3300640: wreck 4
+    3300642: wreck 5
+    3300644: wreck 6
+    3300646: wreck 7
+    3300648: wreck 8
+    3300650: wreck 9
+    4300000: wreck
+    4300002: hull
+    4300004: Structure
+    4300006: wreck
+    4300008: back_wreck (1)
+    4300010: front_wreck
+    4300012: hull
+    4300014: wreck
+    4300016: back_wreck
+    4300018: center_wreck
+    4300020: doorB
+    4300022: doorF
+    4300024: platform
+    4300026: hull
+    4300028: wingBL_wreck
+    4300030: front_wreck
+    4300032: center
+    4300034: wingBR
+    4300036: fan (3)
+    4300038: wingFL
+    4300040: wingBL
+    4300042: wingFR
+    4300044: front
+    4300046: wingBR_wreck
+    4300048: back
+    4300050: wingFL_wreck
+    4300052: wingFR_wreck
+    4300054: hull
+    4300056: wingFL
+    4300058: fan
+    4300060: doorB
+    4300062: wreck
+    4300064: platform
+    4300066: doorF
+    4300068: wingCR
+    4300070: wingBL
+    4300072: wingBR
+    4300074: wingCL
+    4300076: engineR
+    4300078: engineL
+    4300080: wingFR
+    4300082: sprite
+    4300084: desert_008
+    4300086: desert_007
+    4300088: cloud (5)
+    4300090: cloud
+    4300092: cloud (3)
+    4300094: FL
+    4300096: FR
+    4300098: FL_wreck
+    4300100: FR_wreck
+    4300102: BL_wreck
+    4300104: BR_wreck
+    4300106: hull
+    4300108: turret
+    4300110: cannon
+    4300112: BR
+    4300114: BL
+    4300116: mesh
+    4300118: turret_section
+    4300120: cannon
+    4300122: mark2L
+    4300124: mark2R
+    4300126: mark2
+    4300128: hull
+    4300130: left_wreck
+    4300132: RB
+    4300134: RF
+    4300136: LF_section
+    4300138: LB_section
+    4300140: repairingSprite
+    4300142: repairingSprite2
+    4300144: hudArrow
+    4300146: thorR_wreck
+    4300148: hull
+    4300150: wingR
+    4300152: wingL
+    4300154: marker
+    4300156: scorePlate
+    4300158: frustumTest
+    4300160: hullF_wreck
+    4300162: hullF
+    4300164: hullC
+    4300166: hullB
+    4300168: hullC_wreck
+    4300170: hullB_wreck
+    4300172: hull
+    4300174: hull_damaged
+    4300176: hull_wreck
+    4300178: front_wreck
+    4300180: Cylinder_003_MeshPart0
+    4300182: Cylinder_003_MeshPart1
+    4300184: Body
+    4300186: Body
+    4300188: Body
+    4300190: body
+    4300192: Body
+    4300194: body
+    4300196: Body
+    4300198: Body
+    4300200: Body
+    4300202: body
+    4300204: Body
+    4300206: body
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

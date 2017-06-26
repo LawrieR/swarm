@@ -1,0 +1,194 @@
+Shader "Custom/sky" {
+Properties {
+ _Stars ("Stars", Color) = (0,0,1,1)
+ _Color ("Sky", Color) = (0,1,1,1)
+ _Horizon ("Horizon", Color) = (0,0.1,0.1,1)
+}
+SubShader { 
+ Tags { "QUEUE"="Background" "RenderType"="Background" "PreviewType"="Skybox" }
+ Pass {
+  Tags { "QUEUE"="Background" "RenderType"="Background" "PreviewType"="Skybox" }
+  ZWrite Off
+  Cull Off
+  GpuProgramID 35155
+Program "vp" {
+SubProgram "d3d9 " {
+Bind "vertex" Vertex
+Matrix 4 [_Object2World] 3
+Matrix 0 [glstate_matrix_mvp]
+"vs_2_0
+dcl_position v0
+dp4 oPos.x, c0, v0
+dp4 oPos.y, c1, v0
+dp4 oPos.z, c2, v0
+dp4 oPos.w, c3, v0
+dp3 r0.x, c4, v0
+dp3 r0.y, c5, v0
+dp3 r0.z, c6, v0
+nrm r1.xyz, r0
+mov oT0.xyz, -r1
+
+"
+}
+SubProgram "d3d11 " {
+Bind "vertex" Vertex
+ConstBuffer "UnityPerDraw" 336
+Matrix 0 [glstate_matrix_mvp]
+Matrix 192 [_Object2World]
+BindCB  "UnityPerDraw" 0
+"vs_4_0
+root12:aaabaaaa
+eefiecedammlohjahaiihlnhofmblnpfkeidlbeiabaaaaaahiacaaaaadaaaaaa
+cmaaaaaagaaaaaaaliaaaaaaejfdeheocmaaaaaaabaaaaaaaiaaaaaacaaaaaaa
+aaaaaaaaaaaaaaaaadaaaaaaaaaaaaaaapapaaaafaepfdejfeejepeoaaklklkl
+epfdeheofaaaaaaaacaaaaaaaiaaaaaadiaaaaaaaaaaaaaaabaaaaaaadaaaaaa
+aaaaaaaaapaaaaaaeeaaaaaaaaaaaaaaaaaaaaaaadaaaaaaabaaaaaaahaiaaaa
+fdfgfpfaepfdejfeejepeoaafeeffiedepepfceeaaklklklfdeieefcliabaaaa
+eaaaabaagoaaaaaafjaaaaaeegiocaaaaaaaaaaaapaaaaaafpaaaaadpcbabaaa
+aaaaaaaaghaaaaaepccabaaaaaaaaaaaabaaaaaagfaaaaadhccabaaaabaaaaaa
+giaaaaacabaaaaaadiaaaaaipcaabaaaaaaaaaaafgbfbaaaaaaaaaaaegiocaaa
+aaaaaaaaabaaaaaadcaaaaakpcaabaaaaaaaaaaaegiocaaaaaaaaaaaaaaaaaaa
+agbabaaaaaaaaaaaegaobaaaaaaaaaaadcaaaaakpcaabaaaaaaaaaaaegiocaaa
+aaaaaaaaacaaaaaakgbkbaaaaaaaaaaaegaobaaaaaaaaaaadcaaaaakpccabaaa
+aaaaaaaaegiocaaaaaaaaaaaadaaaaaapgbpbaaaaaaaaaaaegaobaaaaaaaaaaa
+diaaaaaihcaabaaaaaaaaaaafgbfbaaaaaaaaaaaegiccaaaaaaaaaaaanaaaaaa
+dcaaaaakhcaabaaaaaaaaaaaegiccaaaaaaaaaaaamaaaaaaagbabaaaaaaaaaaa
+egacbaaaaaaaaaaadcaaaaakhcaabaaaaaaaaaaaegiccaaaaaaaaaaaaoaaaaaa
+kgbkbaaaaaaaaaaaegacbaaaaaaaaaaabaaaaaahicaabaaaaaaaaaaaegacbaaa
+aaaaaaaaegacbaaaaaaaaaaaeeaaaaaficaabaaaaaaaaaaadkaabaaaaaaaaaaa
+diaaaaahhcaabaaaaaaaaaaapgapbaaaaaaaaaaaegacbaaaaaaaaaaadgaaaaag
+hccabaaaabaaaaaaegacbaiaebaaaaaaaaaaaaaadoaaaaab"
+}
+SubProgram "d3d11_9x " {
+Bind "vertex" Vertex
+ConstBuffer "UnityPerDraw" 336
+Matrix 0 [glstate_matrix_mvp]
+Matrix 192 [_Object2World]
+BindCB  "UnityPerDraw" 0
+"vs_4_0_level_9_1
+root12:aaabaaaa
+eefiecedhfdeaopcgoageiemfodkfamknjlhdeflabaaaaaajeadaaaaaeaaaaaa
+daaaaaaaeiabaaaaaiadaaaadmadaaaaebgpgodjbaabaaaabaabaaaaaaacpopp
+naaaaaaaeaaaaaaaacaaceaaaaaadmaaaaaadmaaaaaaceaaabaadmaaaaaaaaaa
+aeaaabaaaaaaaaaaaaaaamaaadaaafaaaaaaaaaaaaaaaaaaaaacpoppbpaaaaac
+afaaaaiaaaaaapjaafaaaaadaaaaahiaaaaaffjaagaaoekaaeaaaaaeaaaaahia
+afaaoekaaaaaaajaaaaaoeiaaeaaaaaeaaaaahiaahaaoekaaaaakkjaaaaaoeia
+ceaaaaacabaaahiaaaaaoeiaabaaaaacaaaaahoaabaaoeibafaaaaadaaaaapia
+aaaaffjaacaaoekaaeaaaaaeaaaaapiaabaaoekaaaaaaajaaaaaoeiaaeaaaaae
+aaaaapiaadaaoekaaaaakkjaaaaaoeiaaeaaaaaeaaaaapiaaeaaoekaaaaappja
+aaaaoeiaaeaaaaaeaaaaadmaaaaappiaaaaaoekaaaaaoeiaabaaaaacaaaaamma
+aaaaoeiappppaaaafdeieefcliabaaaaeaaaabaagoaaaaaafjaaaaaeegiocaaa
+aaaaaaaaapaaaaaafpaaaaadpcbabaaaaaaaaaaaghaaaaaepccabaaaaaaaaaaa
+abaaaaaagfaaaaadhccabaaaabaaaaaagiaaaaacabaaaaaadiaaaaaipcaabaaa
+aaaaaaaafgbfbaaaaaaaaaaaegiocaaaaaaaaaaaabaaaaaadcaaaaakpcaabaaa
+aaaaaaaaegiocaaaaaaaaaaaaaaaaaaaagbabaaaaaaaaaaaegaobaaaaaaaaaaa
+dcaaaaakpcaabaaaaaaaaaaaegiocaaaaaaaaaaaacaaaaaakgbkbaaaaaaaaaaa
+egaobaaaaaaaaaaadcaaaaakpccabaaaaaaaaaaaegiocaaaaaaaaaaaadaaaaaa
+pgbpbaaaaaaaaaaaegaobaaaaaaaaaaadiaaaaaihcaabaaaaaaaaaaafgbfbaaa
+aaaaaaaaegiccaaaaaaaaaaaanaaaaaadcaaaaakhcaabaaaaaaaaaaaegiccaaa
+aaaaaaaaamaaaaaaagbabaaaaaaaaaaaegacbaaaaaaaaaaadcaaaaakhcaabaaa
+aaaaaaaaegiccaaaaaaaaaaaaoaaaaaakgbkbaaaaaaaaaaaegacbaaaaaaaaaaa
+baaaaaahicaabaaaaaaaaaaaegacbaaaaaaaaaaaegacbaaaaaaaaaaaeeaaaaaf
+icaabaaaaaaaaaaadkaabaaaaaaaaaaadiaaaaahhcaabaaaaaaaaaaapgapbaaa
+aaaaaaaaegacbaaaaaaaaaaadgaaaaaghccabaaaabaaaaaaegacbaiaebaaaaaa
+aaaaaaaadoaaaaabejfdeheocmaaaaaaabaaaaaaaiaaaaaacaaaaaaaaaaaaaaa
+aaaaaaaaadaaaaaaaaaaaaaaapapaaaafaepfdejfeejepeoaaklklklepfdeheo
+faaaaaaaacaaaaaaaiaaaaaadiaaaaaaaaaaaaaaabaaaaaaadaaaaaaaaaaaaaa
+apaaaaaaeeaaaaaaaaaaaaaaaaaaaaaaadaaaaaaabaaaaaaahaiaaaafdfgfpfa
+epfdejfeejepeoaafeeffiedepepfceeaaklklkl"
+}
+}
+Program "fp" {
+SubProgram "d3d9 " {
+Vector 1 [_Color]
+Vector 2 [_Horizon]
+Vector 0 [_Stars]
+"ps_2_0
+def c3, 1, 16, 0, 0
+dcl_pp t0.xy
+abs r0.w, t0.y
+add r0.x, -r0.w, c3.x
+mul r0.x, r0.x, r0.x
+mul r0.x, r0.x, r0.x
+mov r1, c0
+add r1, -r1, c1
+mad r0, r0.x, r1, c0
+add r1.x, t0.y, c3.x
+pow r2.w, r1.x, c3.y
+cmp r1.x, t0.y, c3.x, r2.w
+lrp_pp r2, r1.x, c2, r0
+mov_pp oC0, r2
+
+"
+}
+SubProgram "d3d11 " {
+ConstBuffer "$Globals" 48
+Vector 0 [_Stars]
+Vector 16 [_Color]
+Vector 32 [_Horizon]
+BindCB  "$Globals" 0
+"ps_4_0
+root12:aaabaaaa
+eefiecedhenmbfakpjkhdihpiafhkjagikbbkbjiabaaaaaahaacaaaaadaaaaaa
+cmaaaaaaieaaaaaaliaaaaaaejfdeheofaaaaaaaacaaaaaaaiaaaaaadiaaaaaa
+aaaaaaaaabaaaaaaadaaaaaaaaaaaaaaapaaaaaaeeaaaaaaaaaaaaaaaaaaaaaa
+adaaaaaaabaaaaaaahacaaaafdfgfpfaepfdejfeejepeoaafeeffiedepepfcee
+aaklklklepfdeheocmaaaaaaabaaaaaaaiaaaaaacaaaaaaaaaaaaaaaaaaaaaaa
+adaaaaaaaaaaaaaaapaaaaaafdfgfpfegbhcghgfheaaklklfdeieefclaabaaaa
+eaaaaaaagmaaaaaafjaaaaaeegiocaaaaaaaaaaaadaaaaaagcbaaaadccbabaaa
+abaaaaaagfaaaaadpccabaaaaaaaaaaagiaaaaacadaaaaaadeaaaaaibcaabaaa
+aaaaaaaabkbabaiaebaaaaaaabaaaaaaabeaaaaaaaaaaaaaaaaaaaaibcaabaaa
+aaaaaaaaakaabaiaebaaaaaaaaaaaaaaabeaaaaaaaaaiadpcpaaaaafbcaabaaa
+aaaaaaaaakaabaaaaaaaaaaadiaaaaahbcaabaaaaaaaaaaaakaabaaaaaaaaaaa
+abeaaaaaaaaaiaebbjaaaaafbcaabaaaaaaaaaaaakaabaaaaaaaaaaaaaaaaaai
+ccaabaaaaaaaaaaabkbabaiambaaaaaaabaaaaaaabeaaaaaaaaaiadpdiaaaaah
+ccaabaaaaaaaaaaabkaabaaaaaaaaaaabkaabaaaaaaaaaaadiaaaaahccaabaaa
+aaaaaaaabkaabaaaaaaaaaaabkaabaaaaaaaaaaaaaaaaaakpcaabaaaabaaaaaa
+egiocaiaebaaaaaaaaaaaaaaaaaaaaaaegiocaaaaaaaaaaaabaaaaaadcaaaaak
+pcaabaaaabaaaaaafgafbaaaaaaaaaaaegaobaaaabaaaaaaegiocaaaaaaaaaaa
+aaaaaaaaaaaaaaajpcaabaaaacaaaaaaegaobaiaebaaaaaaabaaaaaaegiocaaa
+aaaaaaaaacaaaaaadcaaaaajpccabaaaaaaaaaaaagaabaaaaaaaaaaaegaobaaa
+acaaaaaaegaobaaaabaaaaaadoaaaaab"
+}
+SubProgram "d3d11_9x " {
+ConstBuffer "$Globals" 48
+Vector 0 [_Stars]
+Vector 16 [_Color]
+Vector 32 [_Horizon]
+BindCB  "$Globals" 0
+"ps_4_0_level_9_1
+root12:aaabaaaa
+eefiecedchbmikkoakccjbikckgdkdngnmfdiikdabaaaaaajiadaaaaaeaaaaaa
+daaaaaaafeabaaaaamadaaaageadaaaaebgpgodjbmabaaaabmabaaaaaaacpppp
+omaaaaaadaaaaaaaabaaceaaaaaadaaaaaaadaaaaaaaceaaaaaadaaaaaaaaaaa
+adaaaaaaaaaaaaaaaaacppppfbaaaaafadaaapkaaaaaiadpaaaaiaebaaaaaaaa
+aaaaaaaabpaaaaacaaaaaaiaaaaachlacdaaaaacaaaaaiiaaaaafflaacaaaaad
+aaaaabiaaaaappibadaaaakaafaaaaadaaaaabiaaaaaaaiaaaaaaaiaafaaaaad
+aaaaabiaaaaaaaiaaaaaaaiaabaaaaacabaaapiaaaaaoekaacaaaaadabaaapia
+abaaoeibabaaoekaaeaaaaaeaaaaapiaaaaaaaiaabaaoeiaaaaaoekaacaaaaad
+abaaabiaaaaafflaadaaaakacaaaaaadacaaaiiaabaaaaiaadaaffkafiaaaaae
+abaaabiaaaaafflaadaaaakaacaappiabcaaaaaeacaacpiaabaaaaiaacaaoeka
+aaaaoeiaabaaaaacaaaicpiaacaaoeiappppaaaafdeieefclaabaaaaeaaaaaaa
+gmaaaaaafjaaaaaeegiocaaaaaaaaaaaadaaaaaagcbaaaadccbabaaaabaaaaaa
+gfaaaaadpccabaaaaaaaaaaagiaaaaacadaaaaaadeaaaaaibcaabaaaaaaaaaaa
+bkbabaiaebaaaaaaabaaaaaaabeaaaaaaaaaaaaaaaaaaaaibcaabaaaaaaaaaaa
+akaabaiaebaaaaaaaaaaaaaaabeaaaaaaaaaiadpcpaaaaafbcaabaaaaaaaaaaa
+akaabaaaaaaaaaaadiaaaaahbcaabaaaaaaaaaaaakaabaaaaaaaaaaaabeaaaaa
+aaaaiaebbjaaaaafbcaabaaaaaaaaaaaakaabaaaaaaaaaaaaaaaaaaiccaabaaa
+aaaaaaaabkbabaiambaaaaaaabaaaaaaabeaaaaaaaaaiadpdiaaaaahccaabaaa
+aaaaaaaabkaabaaaaaaaaaaabkaabaaaaaaaaaaadiaaaaahccaabaaaaaaaaaaa
+bkaabaaaaaaaaaaabkaabaaaaaaaaaaaaaaaaaakpcaabaaaabaaaaaaegiocaia
+ebaaaaaaaaaaaaaaaaaaaaaaegiocaaaaaaaaaaaabaaaaaadcaaaaakpcaabaaa
+abaaaaaafgafbaaaaaaaaaaaegaobaaaabaaaaaaegiocaaaaaaaaaaaaaaaaaaa
+aaaaaaajpcaabaaaacaaaaaaegaobaiaebaaaaaaabaaaaaaegiocaaaaaaaaaaa
+acaaaaaadcaaaaajpccabaaaaaaaaaaaagaabaaaaaaaaaaaegaobaaaacaaaaaa
+egaobaaaabaaaaaadoaaaaabejfdeheofaaaaaaaacaaaaaaaiaaaaaadiaaaaaa
+aaaaaaaaabaaaaaaadaaaaaaaaaaaaaaapaaaaaaeeaaaaaaaaaaaaaaaaaaaaaa
+adaaaaaaabaaaaaaahacaaaafdfgfpfaepfdejfeejepeoaafeeffiedepepfcee
+aaklklklepfdeheocmaaaaaaabaaaaaaaiaaaaaacaaaaaaaaaaaaaaaaaaaaaaa
+adaaaaaaaaaaaaaaapaaaaaafdfgfpfegbhcghgfheaaklkl"
+}
+}
+ }
+}
+}

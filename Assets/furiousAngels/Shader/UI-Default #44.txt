@@ -1,0 +1,194 @@
+Shader "UI/Default" {
+Properties {
+[PerRendererData]  _MainTex ("Sprite Texture", 2D) = "white" { }
+ _Color ("Tint", Color) = (1,1,1,1)
+ _StencilComp ("Stencil Comparison", Float) = 8
+ _Stencil ("Stencil ID", Float) = 0
+ _StencilOp ("Stencil Operation", Float) = 0
+ _StencilWriteMask ("Stencil Write Mask", Float) = 255
+ _StencilReadMask ("Stencil Read Mask", Float) = 255
+ _ColorMask ("Color Mask", Float) = 15
+}
+SubShader { 
+ Tags { "QUEUE"="Transparent" "IGNOREPROJECTOR"="true" "RenderType"="Transparent" "PreviewType"="Plane" "CanUseSpriteAtlas"="true" }
+ Pass {
+  Tags { "QUEUE"="Transparent" "IGNOREPROJECTOR"="true" "RenderType"="Transparent" "PreviewType"="Plane" "CanUseSpriteAtlas"="true" }
+  ZTest [unity_GUIZTestMode]
+  ZWrite Off
+  Cull Off
+  Stencil {
+   Ref [_Stencil]
+   ReadMask [_StencilReadMask]
+   WriteMask [_StencilWriteMask]
+   Comp [_StencilComp]
+   Pass [_StencilOp]
+  }
+  Blend SrcAlpha OneMinusSrcAlpha
+  ColorMask [_ColorMask]
+  GpuProgramID 53140
+Program "vp" {
+SubProgram "d3d9 " {
+Bind "vertex" Vertex
+Bind "color" Color
+Bind "texcoord" TexCoord0
+Matrix 0 [glstate_matrix_mvp]
+Vector 5 [_Color]
+Vector 4 [_ScreenParams]
+"vs_2_0
+def c6, -1, 1, 0, 0
+dcl_position v0
+dcl_color v1
+dcl_texcoord v2
+dp4 oPos.z, c2, v0
+dp4 oPos.w, c3, v0
+dp4 r0.x, c0, v0
+dp4 r0.y, c1, v0
+mov r1.x, c6.x
+add r0.zw, r1.x, c4
+mad oPos.xy, r0.zwzw, c6, r0
+mul oD0, v1, c5
+mov oT0.xy, v2
+
+"
+}
+SubProgram "d3d11 " {
+Bind "vertex" Vertex
+Bind "color" Color
+Bind "texcoord" TexCoord0
+ConstBuffer "$Globals" 112
+Vector 96 [_Color]
+ConstBuffer "UnityPerDraw" 336
+Matrix 0 [glstate_matrix_mvp]
+BindCB  "$Globals" 0
+BindCB  "UnityPerDraw" 1
+"vs_4_0
+root12:aaacaaaa
+eefiecedjponkieeepkkljglkeagkmihoaedoijmabaaaaaageacaaaaadaaaaaa
+cmaaaaaajmaaaaaabaabaaaaejfdeheogiaaaaaaadaaaaaaaiaaaaaafaaaaaaa
+aaaaaaaaaaaaaaaaadaaaaaaaaaaaaaaapapaaaafjaaaaaaaaaaaaaaaaaaaaaa
+adaaaaaaabaaaaaaapapaaaafpaaaaaaaaaaaaaaaaaaaaaaadaaaaaaacaaaaaa
+adadaaaafaepfdejfeejepeoaaedepemepfcaafeeffiedepepfceeaaepfdeheo
+gmaaaaaaadaaaaaaaiaaaaaafaaaaaaaaaaaaaaaabaaaaaaadaaaaaaaaaaaaaa
+apaaaaaafmaaaaaaaaaaaaaaaaaaaaaaadaaaaaaabaaaaaaapaaaaaagcaaaaaa
+aaaaaaaaaaaaaaaaadaaaaaaacaaaaaaadamaaaafdfgfpfaepfdejfeejepeoaa
+edepemepfcaafeeffiedepepfceeaaklfdeieefcemabaaaaeaaaabaafdaaaaaa
+fjaaaaaeegiocaaaaaaaaaaaahaaaaaafjaaaaaeegiocaaaabaaaaaaaeaaaaaa
+fpaaaaadpcbabaaaaaaaaaaafpaaaaadpcbabaaaabaaaaaafpaaaaaddcbabaaa
+acaaaaaaghaaaaaepccabaaaaaaaaaaaabaaaaaagfaaaaadpccabaaaabaaaaaa
+gfaaaaaddccabaaaacaaaaaagiaaaaacabaaaaaadiaaaaaipcaabaaaaaaaaaaa
+fgbfbaaaaaaaaaaaegiocaaaabaaaaaaabaaaaaadcaaaaakpcaabaaaaaaaaaaa
+egiocaaaabaaaaaaaaaaaaaaagbabaaaaaaaaaaaegaobaaaaaaaaaaadcaaaaak
+pcaabaaaaaaaaaaaegiocaaaabaaaaaaacaaaaaakgbkbaaaaaaaaaaaegaobaaa
+aaaaaaaadcaaaaakpccabaaaaaaaaaaaegiocaaaabaaaaaaadaaaaaapgbpbaaa
+aaaaaaaaegaobaaaaaaaaaaadiaaaaaipccabaaaabaaaaaaegbobaaaabaaaaaa
+egiocaaaaaaaaaaaagaaaaaadgaaaaafdccabaaaacaaaaaaegbabaaaacaaaaaa
+doaaaaab"
+}
+SubProgram "d3d11_9x " {
+Bind "vertex" Vertex
+Bind "color" Color
+Bind "texcoord" TexCoord0
+ConstBuffer "$Globals" 112
+Vector 96 [_Color]
+ConstBuffer "UnityPerDraw" 336
+Matrix 0 [glstate_matrix_mvp]
+BindCB  "$Globals" 0
+BindCB  "UnityPerDraw" 1
+"vs_4_0_level_9_1
+root12:aaacaaaa
+eefiecedpnahgoiimggdnpnonlgfgoobcndccdbjabaaaaaageadaaaaaeaaaaaa
+daaaaaaacmabaaaaiaacaaaapaacaaaaebgpgodjpeaaaaaapeaaaaaaaaacpopp
+leaaaaaaeaaaaaaaacaaceaaaaaadmaaaaaadmaaaaaaceaaabaadmaaaaaaagaa
+abaaabaaaaaaaaaaabaaaaaaaeaaacaaaaaaaaaaaaaaaaaaaaacpoppbpaaaaac
+afaaaaiaaaaaapjabpaaaaacafaaabiaabaaapjabpaaaaacafaaaciaacaaapja
+afaaaaadaaaaapoaabaaoejaabaaoekaafaaaaadaaaaapiaaaaaffjaadaaoeka
+aeaaaaaeaaaaapiaacaaoekaaaaaaajaaaaaoeiaaeaaaaaeaaaaapiaaeaaoeka
+aaaakkjaaaaaoeiaaeaaaaaeaaaaapiaafaaoekaaaaappjaaaaaoeiaaeaaaaae
+aaaaadmaaaaappiaaaaaoekaaaaaoeiaabaaaaacaaaaammaaaaaoeiaabaaaaac
+abaaadoaacaaoejappppaaaafdeieefcemabaaaaeaaaabaafdaaaaaafjaaaaae
+egiocaaaaaaaaaaaahaaaaaafjaaaaaeegiocaaaabaaaaaaaeaaaaaafpaaaaad
+pcbabaaaaaaaaaaafpaaaaadpcbabaaaabaaaaaafpaaaaaddcbabaaaacaaaaaa
+ghaaaaaepccabaaaaaaaaaaaabaaaaaagfaaaaadpccabaaaabaaaaaagfaaaaad
+dccabaaaacaaaaaagiaaaaacabaaaaaadiaaaaaipcaabaaaaaaaaaaafgbfbaaa
+aaaaaaaaegiocaaaabaaaaaaabaaaaaadcaaaaakpcaabaaaaaaaaaaaegiocaaa
+abaaaaaaaaaaaaaaagbabaaaaaaaaaaaegaobaaaaaaaaaaadcaaaaakpcaabaaa
+aaaaaaaaegiocaaaabaaaaaaacaaaaaakgbkbaaaaaaaaaaaegaobaaaaaaaaaaa
+dcaaaaakpccabaaaaaaaaaaaegiocaaaabaaaaaaadaaaaaapgbpbaaaaaaaaaaa
+egaobaaaaaaaaaaadiaaaaaipccabaaaabaaaaaaegbobaaaabaaaaaaegiocaaa
+aaaaaaaaagaaaaaadgaaaaafdccabaaaacaaaaaaegbabaaaacaaaaaadoaaaaab
+ejfdeheogiaaaaaaadaaaaaaaiaaaaaafaaaaaaaaaaaaaaaaaaaaaaaadaaaaaa
+aaaaaaaaapapaaaafjaaaaaaaaaaaaaaaaaaaaaaadaaaaaaabaaaaaaapapaaaa
+fpaaaaaaaaaaaaaaaaaaaaaaadaaaaaaacaaaaaaadadaaaafaepfdejfeejepeo
+aaedepemepfcaafeeffiedepepfceeaaepfdeheogmaaaaaaadaaaaaaaiaaaaaa
+faaaaaaaaaaaaaaaabaaaaaaadaaaaaaaaaaaaaaapaaaaaafmaaaaaaaaaaaaaa
+aaaaaaaaadaaaaaaabaaaaaaapaaaaaagcaaaaaaaaaaaaaaaaaaaaaaadaaaaaa
+acaaaaaaadamaaaafdfgfpfaepfdejfeejepeoaaedepemepfcaafeeffiedepep
+fceeaakl"
+}
+}
+Program "fp" {
+SubProgram "d3d9 " {
+SetTexture 0 [_MainTex] 2D 0
+"ps_2_0
+def c0, -0.00999999978, 0, 0, 0
+dcl v0
+dcl_pp t0.xy
+dcl_2d s0
+texld r0, t0, s0
+mad_pp r1, r0.w, v0.w, c0.x
+mul_pp r0, r0, v0
+mov_pp oC0, r0
+texkill r1
+
+"
+}
+SubProgram "d3d11 " {
+SetTexture 0 [_MainTex] 2D 0
+"ps_4_0
+root12:abaaabaa
+eefiecedadjklaodokopfkdpcdjdnfjcmecoolmiabaaaaaanaabaaaaadaaaaaa
+cmaaaaaakaaaaaaaneaaaaaaejfdeheogmaaaaaaadaaaaaaaiaaaaaafaaaaaaa
+aaaaaaaaabaaaaaaadaaaaaaaaaaaaaaapaaaaaafmaaaaaaaaaaaaaaaaaaaaaa
+adaaaaaaabaaaaaaapapaaaagcaaaaaaaaaaaaaaaaaaaaaaadaaaaaaacaaaaaa
+adadaaaafdfgfpfaepfdejfeejepeoaaedepemepfcaafeeffiedepepfceeaakl
+epfdeheocmaaaaaaabaaaaaaaiaaaaaacaaaaaaaaaaaaaaaaaaaaaaaadaaaaaa
+aaaaaaaaapaaaaaafdfgfpfegbhcghgfheaaklklfdeieefcpeaaaaaaeaaaaaaa
+dnaaaaaafkaaaaadaagabaaaaaaaaaaafibiaaaeaahabaaaaaaaaaaaffffaaaa
+gcbaaaadpcbabaaaabaaaaaagcbaaaaddcbabaaaacaaaaaagfaaaaadpccabaaa
+aaaaaaaagiaaaaacacaaaaaaefaaaaajpcaabaaaaaaaaaaaegbabaaaacaaaaaa
+eghobaaaaaaaaaaaaagabaaaaaaaaaaadcaaaaajbcaabaaaabaaaaaadkaabaaa
+aaaaaaaadkbabaaaabaaaaaaabeaaaaaaknhcdlmdiaaaaahpcaabaaaaaaaaaaa
+egaobaaaaaaaaaaaegbobaaaabaaaaaadgaaaaafpccabaaaaaaaaaaaegaobaaa
+aaaaaaaadbaaaaahbcaabaaaaaaaaaaaakaabaaaabaaaaaaabeaaaaaaaaaaaaa
+anaaaeadakaabaaaaaaaaaaadoaaaaab"
+}
+SubProgram "d3d11_9x " {
+SetTexture 0 [_MainTex] 2D 0
+"ps_4_0_level_9_1
+root12:abaaabaa
+eefiecedknhlffangbeofgmlphegcaoljljppkdiabaaaaaajaacaaaaaeaaaaaa
+daaaaaaaomaaaaaaoiabaaaafmacaaaaebgpgodjleaaaaaaleaaaaaaaaacpppp
+imaaaaaaciaaaaaaaaaaciaaaaaaciaaaaaaciaaabaaceaaaaaaciaaaaaaaaaa
+aaacppppfbaaaaafaaaaapkaaknhcdlmaaaaaaaaaaaaaaaaaaaaaaaabpaaaaac
+aaaaaaiaaaaaaplabpaaaaacaaaaaaiaabaacdlabpaaaaacaaaaaajaaaaiapka
+ecaaaaadaaaaapiaabaaoelaaaaioekaaeaaaaaeabaacpiaaaaappiaaaaappla
+aaaaaakaafaaaaadaaaacpiaaaaaoeiaaaaaoelaabaaaaacaaaicpiaaaaaoeia
+ebaaaaababaaapiappppaaaafdeieefcpeaaaaaaeaaaaaaadnaaaaaafkaaaaad
+aagabaaaaaaaaaaafibiaaaeaahabaaaaaaaaaaaffffaaaagcbaaaadpcbabaaa
+abaaaaaagcbaaaaddcbabaaaacaaaaaagfaaaaadpccabaaaaaaaaaaagiaaaaac
+acaaaaaaefaaaaajpcaabaaaaaaaaaaaegbabaaaacaaaaaaeghobaaaaaaaaaaa
+aagabaaaaaaaaaaadcaaaaajbcaabaaaabaaaaaadkaabaaaaaaaaaaadkbabaaa
+abaaaaaaabeaaaaaaknhcdlmdiaaaaahpcaabaaaaaaaaaaaegaobaaaaaaaaaaa
+egbobaaaabaaaaaadgaaaaafpccabaaaaaaaaaaaegaobaaaaaaaaaaadbaaaaah
+bcaabaaaaaaaaaaaakaabaaaabaaaaaaabeaaaaaaaaaaaaaanaaaeadakaabaaa
+aaaaaaaadoaaaaabejfdeheogmaaaaaaadaaaaaaaiaaaaaafaaaaaaaaaaaaaaa
+abaaaaaaadaaaaaaaaaaaaaaapaaaaaafmaaaaaaaaaaaaaaaaaaaaaaadaaaaaa
+abaaaaaaapapaaaagcaaaaaaaaaaaaaaaaaaaaaaadaaaaaaacaaaaaaadadaaaa
+fdfgfpfaepfdejfeejepeoaaedepemepfcaafeeffiedepepfceeaaklepfdeheo
+cmaaaaaaabaaaaaaaiaaaaaacaaaaaaaaaaaaaaaaaaaaaaaadaaaaaaaaaaaaaa
+apaaaaaafdfgfpfegbhcghgfheaaklkl"
+}
+}
+ }
+}
+}
