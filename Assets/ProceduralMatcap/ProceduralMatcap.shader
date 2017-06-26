@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 // Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
 
 // Shader created with Shader Forge v1.28 
@@ -44,7 +46,7 @@ Shader "Jonathan3D/Matcap Basic" {
             };
             VertexOutput vert (VertexInput v) {
                 VertexOutput o = (VertexOutput)0;
-                o.pos = mul(UNITY_MATRIX_MVP, float4(v.vertex.xyz + v.normal*lerp( 0.0, (_Outlinewidth/10.0), _EnableOutline ),1) );
+                o.pos = UnityObjectToClipPos(float4(v.vertex.xyz + v.normal*lerp( 0.0, (_Outlinewidth/10.0), _EnableOutline ),1) );
                 UNITY_TRANSFER_FOG(o,o.pos);
                 return o;
             }
@@ -92,7 +94,7 @@ Shader "Jonathan3D/Matcap Basic" {
                 o.normalDir = UnityObjectToWorldNormal(v.normal);
                 o.tangentDir = normalize( mul( unity_ObjectToWorld, float4( v.tangent.xyz, 0.0 ) ).xyz );
                 o.bitangentDir = normalize(cross(o.normalDir, o.tangentDir) * v.tangent.w);
-                o.pos = mul(UNITY_MATRIX_MVP, v.vertex );
+                o.pos = UnityObjectToClipPos(v.vertex );
                 UNITY_TRANSFER_FOG(o,o.pos);
                 return o;
             }
