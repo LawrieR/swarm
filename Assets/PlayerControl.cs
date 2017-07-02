@@ -16,14 +16,57 @@ public class PlayerControl : MonoBehaviour {
     public ParticleSystem particles;
     public static GameObject player;
 
-	// Use this for initialization
-	void Start () {
+    
+    Plane plane = new Plane(Vector3.up, new Vector3(0,385,0)); //Plane used to help get the mouse position in world space as a 3D point - plane must be at the same height as the player...
+    Vector3 m_lastMousePos = Vector3.zero; //Used to track the last position of the mouse - used to determine if the mouse is active also
+    bool m_mouseActive; //Flag to check if the mouse is active - If the mouse is not active then we do not need to do expensive calls such as figuring out the movement direction from rays
+    Vector3 mouseProjectedPosition = Vector3.zero; //Mouse position as a point in 3D space
+
+    // Use this for initialization
+    void Start () {
         //gameObject.GetComponent<ParticleSystem>();
         player = gameObject;
+        
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    private void OnEnable()
+    {
+        m_mouseActive = false;
+        m_lastMousePos = Input.mousePosition;
+    }
+
+    void CheckMouseInUse()
+    {
+        //HorizontalJoy/VerticalJoy is a duplicate of the default Horizontal for the joystick entry. Edit Prefs Inputs, right click - duplicate, rename done :D 
+        bool joystickInUse = (new Vector2(Input.GetAxis("HorizontalJoy"), Input.GetAxis("VerticalJoy")).sqrMagnitude > 0.001f); //Joystick in use?
+        bool keysInUse = (new Vector2(Input.GetAxis("HorizontalKey"), Input.GetAxis("VerticalKey")).sqrMagnitude > 0.001f); //Keyboard in use?
+
+        //Turn mouseActive off if the keyboard or joystick is being used //Turn it back on or keep on if the mouse moves
+        m_mouseActive = (joystickInUse || keysInUse) ? false : ((m_lastMousePos - Input.mousePosition).sqrMagnitude > 0.001f) ? true : m_mouseActive;
+        
+        this.m_lastMousePos = Input.mousePosition; //Update the last position after checks
+    }
+
+    void SetMousePositionInWorldSpace()
+    {
+        if (this.m_mouseActive)
+        {
+            //Cast a ray based on the mouse cursor position
+            Ray ray = Camera.main.ScreenPointToRay(this.m_lastMousePos);
+            float distance;
+            if (plane.Raycast(ray, out distance))
+            {
+                mouseProjectedPosition = ray.GetPoint(distance);
+            }
+        }
+    }
+
+    // Update is called once per frame
+    void Update () {
+
+        CheckMouseInUse();
+        SetMousePositionInWorldSpace();
+        
         bool boost = Input.GetAxis("Fire1") > 0.5f;
         var em = particles.emission;
 
@@ -88,7 +131,26 @@ public class PlayerControl : MonoBehaviour {
         }
 
         Vector3 newDir = Vector3.RotateTowards(transform.forward, inputDir , tempRotSpeed*Time.deltaTime, 0.0f);
-        Debug.DrawRay(transform.position, newDir*10, Color.red);
-        transform.rotation = Quaternion.LookRotation(newDir);
+
+        Debug.DrawRay(transform.position, newDir*20, Color.red);
+
+        Vector3 heading = mouseProjectedPosition - transform.position;
+        float distance = heading.magnitude;
+        Vector3 direction = heading / distance; // Normalized direction.
+
+        Vector3 mNewDir = Vector3.RotateTowards(transform.forward, direction, tempRotSpeed * Time.deltaTime, 0.0f);
+
+
+        Debug.DrawRay(transform.position, direction * 100f, Color.cyan);
+        Debug.DrawRay(mouseProjectedPosition, direction * 100f, Color.blue);
+
+        if (m_mouseActive)
+        { //If the mouse is active the rotate towards the mouse instead of the keyboard direction
+            transform.rotation = Quaternion.LookRotation(mNewDir);
+        }
+        else
+        {
+            transform.rotation = Quaternion.LookRotation(newDir);
+        }
 	}
 }
