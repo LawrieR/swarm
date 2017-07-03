@@ -25,7 +25,6 @@ public class bullet : MonoBehaviour {
 
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("here");
         if (collision.gameObject.tag != "Player") {
             startTime -= 0.5f;
             //destroyThis();

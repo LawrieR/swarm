@@ -14,9 +14,16 @@ public class PlayerControl : MonoBehaviour {
     public float boostTurnMod = 0.25f;
     public float boostAccelerationMod = 3.0f;
     public ParticleSystem particles;
-    public static GameObject player;
+    public static GameObject playerGameObject;
+    public static PlayerControl player;
 
-    
+    private float health = 1;
+    public float getHealth()
+    {
+        return health;
+    }
+
+
     Plane plane = new Plane(Vector3.up, new Vector3(0,385,0)); //Plane used to help get the mouse position in world space as a 3D point - plane must be at the same height as the player...
     Vector3 m_lastMousePos = Vector3.zero; //Used to track the last position of the mouse - used to determine if the mouse is active also
     bool m_mouseActive; //Flag to check if the mouse is active - If the mouse is not active then we do not need to do expensive calls such as figuring out the movement direction from rays
@@ -25,9 +32,9 @@ public class PlayerControl : MonoBehaviour {
     // Use this for initialization
     void Start () {
         //gameObject.GetComponent<ParticleSystem>();
-        player = gameObject;
-        
-	}
+        player = this;
+        playerGameObject = gameObject;
+    }
 
     private void OnEnable()
     {
@@ -114,9 +121,11 @@ public class PlayerControl : MonoBehaviour {
         velocity.z = velocity.z * (1.0f - drag * Time.deltaTime);
 
         gameObject.transform.Translate(velocity, Space.World);
-        
 
-        gameObject.transform.rotation.SetLookRotation(velocity);
+        if (velocity.magnitude > 0)
+        {
+            gameObject.transform.rotation.SetLookRotation(velocity);
+        }
 
         float tempRotSpeed = rotateSpeed;
 
@@ -153,4 +162,10 @@ public class PlayerControl : MonoBehaviour {
             transform.rotation = Quaternion.LookRotation(newDir);
         }
 	}
+
+    public void Damage(float damageAmount)
+    {
+        health -= damageAmount;
+    }
+
 }
