@@ -17,7 +17,6 @@ public class shootable : MonoBehaviour {
 	}
 
     public void damage() {
-        Debug.Log("damaged");
         hp--;
     }
 }

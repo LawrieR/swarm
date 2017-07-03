@@ -18,7 +18,6 @@ public class chase : MonoBehaviour {
 	// Update is called once per frame
     void Update () {
         Vector3 inputDir = (PlayerControl.player.transform.position - transform.position);
-        Debug.Log(inputDir.magnitude);
         if (inputDir.magnitude > 200) {
             inputDir.Normalize();
 
@@ -39,7 +38,10 @@ public class chase : MonoBehaviour {
         velocity.z = velocity.z * (1.0f - drag * Time.deltaTime);
 
         gameObject.transform.Translate(velocity, Space.World);
-        gameObject.transform.rotation.SetLookRotation(velocity);
+        if (velocity.magnitude > 0)
+        {
+            gameObject.transform.rotation.SetLookRotation(velocity);
+        }
 
         Vector3 newDir = Vector3.RotateTowards(transform.forward, inputDir , rotateSpeed*Time.deltaTime, 0.0f);
         Debug.DrawRay(transform.position, newDir*engageRange, Color.red);
